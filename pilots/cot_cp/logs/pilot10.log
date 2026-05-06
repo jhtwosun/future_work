@@ -1,0 +1,66 @@
+GSM8K LP=300 acc=0.903
+GSM8K SC=150 acc=0.940
+MATH  LP=500 acc=0.516
+MATH  SC=200 acc=0.565
+[GSM8K-LP    lp_mean   α=0.05] cov=0.948±0.028 keepacc=0.918 keep%=0.93
+[GSM8K-LP    lp_mean   α=0.10] cov=0.897±0.035 keepacc=0.917 keep%=0.88
+[GSM8K-LP    lp_mean   α=0.20] cov=0.794±0.044 keepacc=0.926 keep%=0.78
+[GSM8K-LP    lp_mean   α=0.30] cov=0.695±0.053 keepacc=0.933 keep%=0.67
+[GSM8K-LP    lp_mean   α=0.40] cov=0.600±0.057 keepacc=0.942 keep%=0.58
+[GSM8K-LP    lp_mean   α=0.50] cov=0.499±0.062 keepacc=0.944 keep%=0.48
+[GSM8K-LP    lp_min    α=0.05] cov=0.947±0.027 keepacc=0.911 keep%=0.94
+[GSM8K-LP    lp_min    α=0.10] cov=0.897±0.036 keepacc=0.914 keep%=0.89
+[GSM8K-LP    lp_min    α=0.20] cov=0.794±0.049 keepacc=0.924 keep%=0.78
+[GSM8K-LP    lp_min    α=0.30] cov=0.696±0.055 keepacc=0.935 keep%=0.67
+[GSM8K-LP    lp_min    α=0.40] cov=0.600±0.058 keepacc=0.941 keep%=0.58
+[GSM8K-LP    lp_min    α=0.50] cov=0.499±0.059 keepacc=0.958 keep%=0.47
+[GSM8K-LP    lp_median α=0.05] cov=0.950±0.026 keepacc=0.910 keep%=0.94
+[GSM8K-LP    lp_median α=0.10] cov=0.898±0.034 keepacc=0.919 keep%=0.88
+[GSM8K-LP    lp_median α=0.20] cov=0.797±0.048 keepacc=0.923 keep%=0.78
+[GSM8K-LP    lp_median α=0.30] cov=0.697±0.058 keepacc=0.930 keep%=0.68
+[GSM8K-LP    lp_median α=0.40] cov=0.599±0.063 keepacc=0.936 keep%=0.58
+[GSM8K-LP    lp_median α=0.50] cov=0.499±0.066 keepacc=0.941 keep%=0.48
+[GSM8K-LP    lp_tok    α=0.05] cov=0.951±0.025 keepacc=0.915 keep%=0.94
+[GSM8K-LP    lp_tok    α=0.10] cov=0.897±0.036 keepacc=0.919 keep%=0.88
+[GSM8K-LP    lp_tok    α=0.20] cov=0.797±0.046 keepacc=0.936 keep%=0.77
+[GSM8K-LP    lp_tok    α=0.30] cov=0.703±0.053 keepacc=0.936 keep%=0.68
+[GSM8K-LP    lp_tok    α=0.40] cov=0.599±0.057 keepacc=0.941 keep%=0.58
+[GSM8K-LP    lp_tok    α=0.50] cov=0.500±0.059 keepacc=0.944 keep%=0.48
+[GSM8K-SC    sc_top1   α=0.05] cov=0.958±0.032 keepacc=0.967 keep%=0.93
+[GSM8K-SC    sc_top1   α=0.10] cov=0.928±0.046 keepacc=0.971 keep%=0.90
+[GSM8K-SC    sc_top1   α=0.20] cov=0.829±0.073 keepacc=0.977 keep%=0.80
+[GSM8K-SC    sc_top1   α=0.30] cov=0.765±0.043 keepacc=0.982 keep%=0.73
+[GSM8K-SC    sc_top1   α=0.40] cov=0.764±0.039 keepacc=0.982 keep%=0.73
+[GSM8K-SC    sc_top1   α=0.50] cov=0.764±0.039 keepacc=0.982 keep%=0.73
+[MATH500-LP  lp_mean   α=0.05] cov=0.945±0.029 keepacc=0.526 keep%=0.92
+[MATH500-LP  lp_mean   α=0.10] cov=0.895±0.038 keepacc=0.537 keep%=0.86
+[MATH500-LP  lp_mean   α=0.20] cov=0.794±0.050 keepacc=0.548 keep%=0.74
+[MATH500-LP  lp_mean   α=0.30] cov=0.694±0.058 keepacc=0.559 keep%=0.64
+[MATH500-LP  lp_mean   α=0.40] cov=0.596±0.059 keepacc=0.563 keep%=0.54
+[MATH500-LP  lp_mean   α=0.50] cov=0.496±0.063 keepacc=0.581 keep%=0.44
+[MATH500-LP  lp_min    α=0.05] cov=0.946±0.027 keepacc=0.522 keep%=0.93
+[MATH500-LP  lp_min    α=0.10] cov=0.895±0.042 keepacc=0.549 keep%=0.84
+[MATH500-LP  lp_min    α=0.20] cov=0.792±0.051 keepacc=0.564 keep%=0.72
+[MATH500-LP  lp_min    α=0.30] cov=0.688±0.059 keepacc=0.571 keep%=0.62
+[MATH500-LP  lp_min    α=0.40] cov=0.588±0.059 keepacc=0.596 keep%=0.51
+[MATH500-LP  lp_min    α=0.50] cov=0.490±0.063 keepacc=0.619 keep%=0.41
+[MATH500-LP  lp_median α=0.05] cov=0.945±0.028 keepacc=0.524 keep%=0.93
+[MATH500-LP  lp_median α=0.10] cov=0.896±0.039 keepacc=0.528 keep%=0.87
+[MATH500-LP  lp_median α=0.20] cov=0.797±0.051 keepacc=0.530 keep%=0.77
+[MATH500-LP  lp_median α=0.30] cov=0.699±0.053 keepacc=0.528 keep%=0.68
+[MATH500-LP  lp_median α=0.40] cov=0.599±0.059 keepacc=0.522 keep%=0.59
+[MATH500-LP  lp_median α=0.50] cov=0.494±0.062 keepacc=0.539 keep%=0.47
+[MATH500-LP  lp_tok    α=0.05] cov=0.945±0.029 keepacc=0.529 keep%=0.92
+[MATH500-LP  lp_tok    α=0.10] cov=0.893±0.040 keepacc=0.535 keep%=0.86
+[MATH500-LP  lp_tok    α=0.20] cov=0.793±0.047 keepacc=0.544 keep%=0.75
+[MATH500-LP  lp_tok    α=0.30] cov=0.693±0.056 keepacc=0.543 keep%=0.66
+[MATH500-LP  lp_tok    α=0.40] cov=0.593±0.057 keepacc=0.527 keep%=0.58
+[MATH500-LP  lp_tok    α=0.50] cov=0.493±0.063 keepacc=0.523 keep%=0.48
+[MATH500-SC  sc_top1   α=0.05] cov=0.958±0.036 keepacc=0.623 keep%=0.87
+[MATH500-SC  sc_top1   α=0.10] cov=0.919±0.041 keepacc=0.663 keep%=0.78
+[MATH500-SC  sc_top1   α=0.20] cov=0.826±0.068 keepacc=0.736 keep%=0.64
+[MATH500-SC  sc_top1   α=0.30] cov=0.761±0.062 keepacc=0.787 keep%=0.55
+[MATH500-SC  sc_top1   α=0.40] cov=0.652±0.079 keepacc=0.790 keep%=0.47
+[MATH500-SC  sc_top1   α=0.50] cov=0.630±0.042 keepacc=0.793 keep%=0.45
+Wrote: /home/nvidia/future/pilots/cot_cp/results/pilot10_extended_cp.json
+Saved: pilot10_pareto.png

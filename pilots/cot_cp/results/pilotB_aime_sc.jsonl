@@ -1,0 +1,30 @@
+{"id": 0, "majority_correct": 1, "any_correct": 1, "top1_frac": 0.25, "majority_pred": "33", "gold": "33", "answer_distribution": {"17": 1, "\\frac{13}{6}": 1, "15": 1, "4": 1, "33": 2, "25": 1, "11": 1}}
+{"id": 1, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.125, "majority_pred": "29", "gold": "23", "answer_distribution": {"29": 1, "5": 1, "\\(\\frac{1}{4}\\)": 1, "\\(p+q=1+4=5\\)": 1, "32": 1, "2": 1, "13": 1, "7": 1}}
+{"id": 2, "majority_correct": 1, "any_correct": 1, "top1_frac": 1.0, "majority_pred": "116", "gold": "116", "answer_distribution": {"116": 8}}
+{"id": 3, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.25, "majority_pred": "1012", "gold": "809", "answer_distribution": {"1011": 1, "1012": 2, "506": 2, "507": 1, "404": 2}}
+{"id": 4, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.125, "majority_pred": "1892", "gold": "197", "answer_distribution": {"1892": 1, "253": 1, "35": 1, "137": 1, "36": 1, "205": 1, "1077": 1, "69": 1}}
+{"id": 5, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.375, "majority_pred": "6", "gold": "385", "answer_distribution": {"12": 1, "4": 2, "6": 3, "24": 1, "\\[": 1}}
+{"id": 6, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.25, "majority_pred": "135", "gold": "371", "answer_distribution": {"17": 1, "129": 1, "293": 1, "163": 1, "135": 2, "3": 2}}
+{"id": 7, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.625, "majority_pred": "1", "gold": "601", "answer_distribution": {"1": 5, "6": 1, "3": 2}}
+{"id": 8, "majority_correct": 1, "any_correct": 1, "top1_frac": 1.0, "majority_pred": "25", "gold": "25", "answer_distribution": {"25": 8}}
+{"id": 9, "majority_correct": 0, "any_correct": 1, "top1_frac": 0.625, "majority_pred": "66", "gold": "55", "answer_distribution": {"66": 5, "11": 1, "74": 1, "55": 1}}
+{"id": 10, "majority_correct": 1, "any_correct": 1, "top1_frac": 0.5, "majority_pred": "540", "gold": "540", "answer_distribution": {"408": 1, "540": 4, "360": 1, "324\\sqrt{3}": 1, "599.16": 1}}
+{"id": 11, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.5, "majority_pred": "1", "gold": "45", "answer_distribution": {"10": 1, "1": 4, "0": 2, "9": 1}}
+{"id": 12, "majority_correct": 1, "any_correct": 1, "top1_frac": 0.625, "majority_pred": "204", "gold": "204", "answer_distribution": {"204": 5, "22": 1, "226.29": 1, "13860": 1}}
+{"id": 13, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.125, "majority_pred": "1427.1429", "gold": "699", "answer_distribution": {"1427.1429": 1, "1000": 1, "117": 1, "165": 1, "112": 1, "820": 1, "1005": 1, "1007": 1}}
+{"id": 14, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.375, "majority_pred": "1365", "gold": "294", "answer_distribution": {"165": 1, "1225": 1, "280": 1, "1365": 3, "70": 1, "48020000": 1}}
+{"id": 15, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.375, "majority_pred": "7", "gold": "110", "answer_distribution": {"12": 2, "7": 3, "13": 1, "11": 1, "17": 1}}
+{"id": 16, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.25, "majority_pred": "47", "gold": "721", "answer_distribution": {"289": 1, "47": 2, "77": 1, "26": 1, "535": 1, "530": 1, "31": 1}}
+{"id": 17, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.125, "majority_pred": "225", "gold": "315", "answer_distribution": {"225": 1, "12": 1, "932": 1, "270": 1, "9": 1, "4356": 1, "66": 1, "42": 1}}
+{"id": 18, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.125, "majority_pred": "325", "gold": "468", "answer_distribution": {"325": 1, "338": 1, "532": 1, "384": 1, "13": 1, "312": 1, "\\[": 1, "49": 1}}
+{"id": 19, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.375, "majority_pred": "1024", "gold": "902", "answer_distribution": {"1024": 3, "200": 1, "20": 1, "2": 1, "503": 1, "59049": 1}}
+{"id": 20, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.25, "majority_pred": "11", "gold": "211", "answer_distribution": {"26": 1, "1": 1, "841": 1, "11": 2, "40": 1, "23": 1, "49": 1}}
+{"id": 21, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.625, "majority_pred": "120", "gold": "80", "answer_distribution": {"120": 5, "160": 1, "100": 2}}
+{"id": 22, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.25, "majority_pred": "176", "gold": "480", "answer_distribution": {"176": 2, "96": 2, "\\frac{44}{5}": 1, "80": 2, "88": 1}}
+{"id": 23, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.125, "majority_pred": "420", "gold": "236", "answer_distribution": {"420": 1, "212": 1, "234": 1, "53": 1, "553": 1, "202": 1, "248": 1, "299": 1}}
+{"id": 24, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.125, "majority_pred": "100", "gold": "73", "answer_distribution": {"100": 1, "956": 1, "659": 1, "141": 1, "4": 1, "95": 1, "17": 1, "556": 1}}
+{"id": 25, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.125, "majority_pred": "49", "gold": "113", "answer_distribution": {"49": 1, "29": 1, "\\(m+n=18+11=29\\)": 1, "15": 1, "17": 1, "103": 1, "5+1=6": 1, "67": 1}}
+{"id": 26, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.25, "majority_pred": "1", "gold": "127", "answer_distribution": {"1": 2, "9": 1, "7": 2, "13": 1, "19": 1, "**": 1}}
+{"id": 27, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.25, "majority_pred": "22", "gold": "104", "answer_distribution": {"1451": 1, "16": 1, "6560": 1, "48": 1, "3": 1, "22": 2, "4": 1}}
+{"id": 28, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.125, "majority_pred": "13", "gold": "104", "answer_distribution": {"13": 1, "184": 1, "168": 1, "77": 1, "33": 1, "124": 1, "72.85": 1, "205": 1}}
+{"id": 29, "majority_correct": 0, "any_correct": 0, "top1_frac": 0.5, "majority_pred": "24", "gold": "321", "answer_distribution": {"192": 1, "576": 1, "2": 1, "24": 4, "432": 1}}

@@ -1,0 +1,97 @@
+[
+  {
+    "N": 1,
+    "n_questions": 200,
+    "majority_accuracy": 0.505,
+    "oracle_any_correct": 0.505,
+    "mean_top1_frac": 1.0,
+    "wallclock_sec": 11.251467943191528,
+    "tokens_per_q": 11.251467943191528,
+    "cp_alpha_0.3": {
+      "kept_acc_mean": 0.5045000000000001,
+      "kept_frac_mean": 1.0,
+      "coverage_mean": 1.0
+    },
+    "cp_alpha_0.5": {
+      "kept_acc_mean": 0.5045000000000001,
+      "kept_frac_mean": 1.0,
+      "coverage_mean": 1.0
+    }
+  },
+  {
+    "N": 4,
+    "n_questions": 200,
+    "majority_accuracy": 0.54,
+    "oracle_any_correct": 0.635,
+    "mean_top1_frac": 0.79,
+    "wallclock_sec": 28.154507875442505,
+    "tokens_per_q": 28.154507875442505,
+    "cp_alpha_0.3": {
+      "kept_acc_mean": 0.7335710446632149,
+      "kept_frac_mean": 0.55805,
+      "coverage_mean": 0.7538285416337751
+    },
+    "cp_alpha_0.5": {
+      "kept_acc_mean": 0.7483580678111992,
+      "kept_frac_mean": 0.5268,
+      "coverage_mean": 0.7297089520819691
+    }
+  },
+  {
+    "N": 8,
+    "n_questions": 200,
+    "majority_accuracy": 0.565,
+    "oracle_any_correct": 0.665,
+    "mean_top1_frac": 0.76375,
+    "wallclock_sec": 55.55793499946594,
+    "tokens_per_q": 55.55793499946594,
+    "cp_alpha_0.3": {
+      "kept_acc_mean": 0.7617680946783295,
+      "kept_frac_mean": 0.55535,
+      "coverage_mean": 0.7494926589487876
+    },
+    "cp_alpha_0.5": {
+      "kept_acc_mean": 0.7984410004688849,
+      "kept_frac_mean": 0.43265,
+      "coverage_mean": 0.612261269417405
+    }
+  },
+  {
+    "N": 16,
+    "n_questions": 200,
+    "majority_accuracy": 0.575,
+    "oracle_any_correct": 0.69,
+    "mean_top1_frac": 0.7503125,
+    "wallclock_sec": 107.27819204330444,
+    "tokens_per_q": 107.27819204330444,
+    "cp_alpha_0.3": {
+      "kept_acc_mean": 0.7875978125508185,
+      "kept_frac_mean": 0.52825,
+      "coverage_mean": 0.722997557984144
+    },
+    "cp_alpha_0.5": {
+      "kept_acc_mean": 0.8410598531755845,
+      "kept_frac_mean": 0.38844999999999996,
+      "coverage_mean": 0.5684982593886169
+    }
+  },
+  {
+    "N": 32,
+    "n_questions": 200,
+    "majority_accuracy": 0.57,
+    "oracle_any_correct": 0.73,
+    "mean_top1_frac": 0.74328125,
+    "wallclock_sec": 211.15561437606812,
+    "tokens_per_q": 211.15561437606812,
+    "cp_alpha_0.3": {
+      "kept_acc_mean": 0.803985446024922,
+      "kept_frac_mean": 0.49975,
+      "coverage_mean": 0.7027557394484113
+    },
+    "cp_alpha_0.5": {
+      "kept_acc_mean": 0.834893994408454,
+      "kept_frac_mean": 0.37355000000000005,
+      "coverage_mean": 0.5465671652997414
+    }
+  }
+]

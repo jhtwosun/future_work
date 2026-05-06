@@ -1,0 +1,13 @@
+sizes: GSM-LP=300, GSM-SC=150, MATH-LP=500, MATH-SC=200, R1-LP=200, AIME-LP=30
+[GSM8K          lp_min    α=0.10] cov=0.899 CI=[0.876,0.920]  kept_acc=0.915 CI=[0.877,0.946]  keep%=0.89
+[GSM8K          sc_top1   α=0.10] cov=0.930 CI=[0.892,0.964]  kept_acc=0.972 CI=[0.942,0.994]  keep%=0.90
+[MATH-500       lp_min    α=0.50] cov=0.499 CI=[0.459,0.538]  kept_acc=0.620 CI=[0.546,0.702]  keep%=0.42
+[MATH-500       sc_top1   α=0.30] cov=0.753 CI=[0.689,0.817]  kept_acc=0.786 CI=[0.693,0.867]  keep%=0.54
+[MATH-500       sc_top1   α=0.50] cov=0.633 CI=[0.551,0.719]  kept_acc=0.799 CI=[0.705,0.883]  keep%=0.45
+[MATH-500-R1    lp_mean   α=0.50] cov=0.496 CI=[0.437,0.552]  kept_acc=0.695 CI=[0.595,0.794]  keep%=0.42
+[MATH-500-R1    lp_min    α=0.50] cov=0.496 CI=[0.437,0.547]  kept_acc=0.672 CI=[0.563,0.774]  keep%=0.44
+[AIME OOD vanilla          lp_min   α=0.50] cov=0.257 CI=[0.000,0.750]  kept_acc=0.373 CI=[0.000,1.000]
+[AIME OOD weighted         lp_min   α=0.50] cov=0.504 CI=[0.000,1.000]  kept_acc=0.152 CI=[0.000,0.333]
+[AIME OOD vanilla mean     lp_mean  α=0.50] cov=0.257 CI=[0.000,0.750]  kept_acc=0.269 CI=[0.000,1.000]
+[AIME OOD weighted mean    lp_mean  α=0.50] cov=0.753 CI=[0.000,1.000]  kept_acc=0.221 CI=[0.000,0.459]
+Wrote: /home/nvidia/future/pilots/cot_cp/results/pilotJ_bootstrap_ci.json

@@ -1,0 +1,109 @@
+{
+  "n_records_streamed": 100000,
+  "n_with_rating": 96244,
+  "rating_counter": {
+    "1": 61363,
+    "-1": 21973,
+    "0": 12908,
+    "None": 3756
+  },
+  "is_solution_counter": {
+    "False": 95669,
+    "True": 4331
+  },
+  "is_human_response_counter": {
+    "False": 97659,
+    "True": 2341
+  },
+  "is_preferred_response_counter": {
+    "True": 59633,
+    "False": 40367
+  },
+  "next_response_length_stats": {
+    "n": 100000,
+    "mean_chars": 82.90443,
+    "median_chars": 74.0,
+    "p90_chars": 142.0
+  },
+  "samples_per_rating": {
+    "1": [
+      {
+        "instruction": "How many seconds are in 7.8 minutes?",
+        "context_steps": 0,
+        "next_response": "7.8 minutes is the same as 7 minutes and 0.8 minutes.",
+        "rating": 1,
+        "is_solution": false,
+        "is_preferred_response": true
+      },
+      {
+        "instruction": "How many seconds are in 7.8 minutes?",
+        "context_steps": 1,
+        "next_response": "Right, and since there are 60 seconds in a minute, then there are 60 * 7 = 420 seconds in 7 minutes.",
+        "rating": 1,
+        "is_solution": false,
+        "is_preferred_response": true
+      }
+    ],
+    "0": [
+      {
+        "instruction": "How many seconds are in 7.8 minutes?",
+        "context_steps": 4,
+        "next_response": "Right. Let's check our work. 7.8 minutes is the same as 7 minutes and 0.8 minutes.",
+        "rating": 0,
+        "is_solution": false,
+        "is_preferred_response": false
+      },
+      {
+        "instruction": "How many positive two-digit integers leave a remainder of 2 when divided by 8?",
+        "context_steps": 0,
+        "next_response": "Let's call our two-digit integers x.",
+        "rating": 0,
+        "is_solution": false,
+        "is_preferred_response": false
+      }
+    ],
+    "-1": [
+      {
+        "instruction": "How many positive two-digit integers leave a remainder of 2 when divided by 8?",
+        "context_steps": 7,
+        "next_response": "And if we keep going we'll see that all the numbers of the form 8n+2 are two-digit integers.",
+        "rating": -1,
+        "is_solution": false,
+        "is_preferred_response": false
+      },
+      {
+        "instruction": "How many positive two-digit integers leave a remainder of 2 when divided by 8?",
+        "context_steps": 9,
+        "next_response": "Right, since 8*13+2 is 102.",
+        "rating": -1,
+        "is_solution": false,
+        "is_preferred_response": false
+      }
+    ],
+    "None": [
+      {
+        "instruction": "How many positive two-digit integers leave a remainder of 2 when divided by 8?",
+        "context_steps": 7,
+        "next_response": "And let's keep plugging numbers until we get a three-digit number.",
+        "rating": null,
+        "is_solution": false,
+        "is_preferred_response": true
+      },
+      {
+        "instruction": "The fifth and eighth terms of a geometric sequence of real numbers are $7!$ and $8!$ respectively. What is the first term?",
+        "context_steps": 3,
+        "next_response": "So, $r^3 = 8$.",
+        "rating": null,
+        "is_solution": false,
+        "is_preferred_response": true
+      }
+    ]
+  }
+}
+Fatal Python error: PyGILState_Release: thread state 0x7986881ceb60 must be current when releasing
+Python runtime state: finalizing (tstate=0x0000000000ba5748)
+
+Thread 0x0000798949966080 (most recent call first):
+  <no Python frame>
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg, pyarrow.lib, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, _cyutility, pandas._libs._cyutility, pandas._libs.tslibs.ccalendar, pandas._libs.tslibs.np_datetime, pandas._libs.tslibs.dtypes, pandas._libs.tslibs.base, pandas._libs.tslibs.nattype, pandas._libs.tslibs.timezones, pandas._libs.properties, pandas._libs.tslibs.fields, pandas._libs.tslibs.timedeltas, pandas._libs.tslibs.tzconversion, pandas._libs.tslibs.timestamps, pandas._libs.tslibs.offsets, pandas._libs.tslibs.strptime, pandas._libs.tslibs.parsing, pandas._libs.tslibs.conversion, pandas._libs.tslibs.period, pandas._libs.tslibs.vectorized, pandas._libs.ops_dispatch, pandas._libs.missing, pandas._libs.hashtable, pandas._libs.algos, pandas._libs.interval, pandas._libs.lib, pyarrow._compute, pandas._libs.ops, pandas._libs.hashing, pandas._libs.arrays, pandas._libs.tslib, pandas._libs.sparse, pandas._libs.internals, pandas._libs.indexing, pandas._libs.index, pandas._libs.writers, pandas._libs.join, pandas._libs.window.aggregations, pandas._libs.window.indexers, pandas._libs.reshape, pandas._libs.groupby, pandas._libs.json, pandas._libs.parsers, pandas._libs.testing, pyarrow._acero, pyarrow._fs, pyarrow._csv, pyarrow._json, pyarrow._substrait, pyarrow._dataset, pyarrow._dataset_orc, pyarrow._parquet, pyarrow._azurefs, pyarrow._hdfs, pyarrow._gcsfs, pyarrow._s3fs, pyarrow._parquet_encryption, pyarrow._dataset_parquet_encryption, pyarrow._dataset_parquet, charset_normalizer.md, requests.packages.charset_normalizer.md, requests.packages.chardet.md, yaml._yaml, multidict._multidict, yarl._quoting_c, propcache._helpers_c, aiohttp._http_writer, aiohttp._http_parser, aiohttp._websocket.mask, aiohttp._websocket.reader_c, frozenlist._frozenlist, xxhash._xxhash, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg._matfuncs_expm, scipy.linalg._linalg_pythran, scipy.linalg.cython_blas, scipy.linalg._decomp_update, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.linalg._propack._spropack, scipy.sparse.linalg._propack._dpropack, scipy.sparse.linalg._propack._cpropack, scipy.sparse.linalg._propack._zpropack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.io.matlab._mio_utils, scipy.io.matlab._streams, scipy.io.matlab._mio5_utils, torch._C, torch._C._dynamo.autograd_compiler, torch._C._dynamo.eval_frame, torch._C._dynamo.guards, torch._C._dynamo.utils, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special (total: 125)

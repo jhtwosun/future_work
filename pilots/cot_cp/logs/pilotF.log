@@ -1,0 +1,17 @@
+MATH cal: 500  AIME test: 30
+[OOD lp_mean   α=0.05] target=0.95  vanilla cov=1.00 acc=0.17 keep%=0.77  |  weighted cov=1.00 acc=0.14 keep%=0.93
+[OOD lp_mean   α=0.10] target=0.90  vanilla cov=1.00 acc=0.19 keep%=0.70  |  weighted cov=1.00 acc=0.15 keep%=0.87
+[OOD lp_mean   α=0.20] target=0.80  vanilla cov=1.00 acc=0.22 keep%=0.60  |  weighted cov=1.00 acc=0.18 keep%=0.73
+[OOD lp_mean   α=0.30] target=0.70  vanilla cov=0.75 acc=0.23 keep%=0.43  |  weighted cov=1.00 acc=0.21 keep%=0.63
+[OOD lp_mean   α=0.50] target=0.50  vanilla cov=0.25 acc=0.25 keep%=0.13  |  weighted cov=0.75 acc=0.21 keep%=0.47
+[OOD lp_min    α=0.05] target=0.95  vanilla cov=0.75 acc=0.11 keep%=0.93  |  weighted cov=0.75 acc=0.10 keep%=0.97
+[OOD lp_min    α=0.10] target=0.90  vanilla cov=0.50 acc=0.09 keep%=0.73  |  weighted cov=0.75 acc=0.11 keep%=0.90
+[OOD lp_min    α=0.20] target=0.80  vanilla cov=0.50 acc=0.12 keep%=0.53  |  weighted cov=0.50 acc=0.10 keep%=0.70
+[OOD lp_min    α=0.30] target=0.70  vanilla cov=0.50 acc=0.14 keep%=0.47  |  weighted cov=0.50 acc=0.11 keep%=0.60
+[OOD lp_min    α=0.50] target=0.50  vanilla cov=0.25 acc=0.33 keep%=0.10  |  weighted cov=0.50 acc=0.14 keep%=0.47
+[OOD lp_median α=0.05] target=0.95  vanilla cov=1.00 acc=0.17 keep%=0.80  |  weighted cov=1.00 acc=0.15 keep%=0.90
+[OOD lp_median α=0.10] target=0.90  vanilla cov=1.00 acc=0.18 keep%=0.73  |  weighted cov=1.00 acc=0.16 keep%=0.83
+[OOD lp_median α=0.20] target=0.80  vanilla cov=1.00 acc=0.20 keep%=0.67  |  weighted cov=1.00 acc=0.17 keep%=0.77
+[OOD lp_median α=0.30] target=0.70  vanilla cov=0.75 acc=0.20 keep%=0.50  |  weighted cov=1.00 acc=0.19 keep%=0.70
+[OOD lp_median α=0.50] target=0.50  vanilla cov=0.75 acc=0.38 keep%=0.27  |  weighted cov=0.75 acc=0.20 keep%=0.50
+Wrote: /home/nvidia/future/pilots/cot_cp/results/pilotF_weighted_cp.json  +  pilotF_density_ratio.png

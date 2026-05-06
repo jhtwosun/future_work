@@ -1,0 +1,18 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "alpha": 0.3,
+  "q_hat_prm_min": 0.984375,
+  "n_cal": 100,
+  "n_test": 100,
+  "vanilla_acc": 0.52,
+  "always_branch_acc": 0.52,
+  "cp_branch_acc": 0.52,
+  "n_cp_triggered": 57,
+  "cp_trigger_rate": 0.57,
+  "always_recovered": 2,
+  "always_lost": 2,
+  "cp_recovered": 2,
+  "cp_lost": 2,
+  "K_branch": 4,
+  "branch_wallclock_sec": 15.842310428619385
+}

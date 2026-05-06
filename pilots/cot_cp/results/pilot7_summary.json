@@ -1,0 +1,9 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "dataset": "MATH-500",
+  "n": 500,
+  "accuracy": 0.516,
+  "parse_failures": 0,
+  "wallclock_sec": 24.11905598640442,
+  "sec_per_question": 0.04823811197280884
+}

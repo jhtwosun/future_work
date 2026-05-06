@@ -1,0 +1,56 @@
+Loaded 500 pilot7 MATH traces
+Loading PRM Qwen/Qwen2.5-Math-PRM-7B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.23it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.29it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.52it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.43it/s]
+Some weights of the model checkpoint at Qwen/Qwen2.5-Math-PRM-7B were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']
+- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  loaded in 5.2s
+  step-sep token id = 151651
+  25/500 done
+  50/500 done
+  75/500 done
+  100/500 done
+  125/500 done
+  150/500 done
+  175/500 done
+  200/500 done
+  225/500 done
+  250/500 done
+  275/500 done
+  300/500 done
+  325/500 done
+  350/500 done
+  375/500 done
+  400/500 done
+  425/500 done
+  450/500 done
+  475/500 done
+  500/500 done
+Total scored: 500
+[prm_mean   α=0.05] cov=0.948 keepacc=0.631 keep%=0.77
+[prm_mean   α=0.10] cov=0.896 keepacc=0.673 keep%=0.68
+[prm_mean   α=0.20] cov=0.793 keepacc=0.672 keep%=0.61
+[prm_mean   α=0.30] cov=0.696 keepacc=0.666 keep%=0.54
+[prm_mean   α=0.50] cov=0.498 keepacc=0.699 keep%=0.37
+[prm_min    α=0.05] cov=0.945 keepacc=0.645 keep%=0.75
+[prm_min    α=0.10] cov=0.895 keepacc=0.676 keep%=0.68
+[prm_min    α=0.20] cov=0.792 keepacc=0.680 keep%=0.60
+[prm_min    α=0.30] cov=0.694 keepacc=0.683 keep%=0.52
+[prm_min    α=0.50] cov=0.529 keepacc=0.707 keep%=0.38
+[prm_median α=0.05] cov=0.948 keepacc=0.590 keep%=0.83
+[prm_median α=0.10] cov=0.906 keepacc=0.624 keep%=0.75
+[prm_median α=0.20] cov=0.818 keepacc=0.630 keep%=0.67
+[prm_median α=0.30] cov=0.723 keepacc=0.650 keep%=0.57
+[prm_median α=0.50] cov=0.661 keepacc=0.658 keep%=0.52
+[prm_last   α=0.05] cov=0.945 keepacc=0.614 keep%=0.79
+[prm_last   α=0.10] cov=0.906 keepacc=0.630 keep%=0.74
+[prm_last   α=0.20] cov=0.843 keepacc=0.659 keep%=0.66
+[prm_last   α=0.30] cov=0.772 keepacc=0.682 keep%=0.58
+[prm_last   α=0.50] cov=0.772 keepacc=0.682 keep%=0.58
+[prm_first  α=0.05] cov=0.944 keepacc=0.528 keep%=0.92
+[prm_first  α=0.10] cov=0.902 keepacc=0.537 keep%=0.86
+[prm_first  α=0.20] cov=0.826 keepacc=0.542 keep%=0.78
+[prm_first  α=0.30] cov=0.738 keepacc=0.537 keep%=0.71
+[prm_first  α=0.50] cov=0.561 keepacc=0.534 keep%=0.54
+Wrote: /home/nvidia/future/pilots/cot_cp/results/pilotA_prm_scoring.json

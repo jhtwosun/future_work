@@ -1,0 +1,102 @@
+{
+  "n_records_streamed": 100000,
+  "n_with_rating": 96244,
+  "rating_counter": {
+    "1": 61363,
+    "-1": 21973,
+    "0": 12908,
+    "None": 3756
+  },
+  "is_solution_counter": {
+    "False": 95669,
+    "True": 4331
+  },
+  "is_human_response_counter": {
+    "False": 97659,
+    "True": 2341
+  },
+  "is_preferred_response_counter": {
+    "True": 59633,
+    "False": 40367
+  },
+  "next_response_length_stats": {
+    "n": 100000,
+    "mean_chars": 82.90443,
+    "median_chars": 74.0,
+    "p90_chars": 142.0
+  },
+  "samples_per_rating": {
+    "1": [
+      {
+        "instruction": "How many seconds are in 7.8 minutes?",
+        "context_steps": 0,
+        "next_response": "7.8 minutes is the same as 7 minutes and 0.8 minutes.",
+        "rating": 1,
+        "is_solution": false,
+        "is_preferred_response": true
+      },
+      {
+        "instruction": "How many seconds are in 7.8 minutes?",
+        "context_steps": 1,
+        "next_response": "Right, and since there are 60 seconds in a minute, then there are 60 * 7 = 420 seconds in 7 minutes.",
+        "rating": 1,
+        "is_solution": false,
+        "is_preferred_response": true
+      }
+    ],
+    "0": [
+      {
+        "instruction": "How many seconds are in 7.8 minutes?",
+        "context_steps": 4,
+        "next_response": "Right. Let's check our work. 7.8 minutes is the same as 7 minutes and 0.8 minutes.",
+        "rating": 0,
+        "is_solution": false,
+        "is_preferred_response": false
+      },
+      {
+        "instruction": "How many positive two-digit integers leave a remainder of 2 when divided by 8?",
+        "context_steps": 0,
+        "next_response": "Let's call our two-digit integers x.",
+        "rating": 0,
+        "is_solution": false,
+        "is_preferred_response": false
+      }
+    ],
+    "-1": [
+      {
+        "instruction": "How many positive two-digit integers leave a remainder of 2 when divided by 8?",
+        "context_steps": 7,
+        "next_response": "And if we keep going we'll see that all the numbers of the form 8n+2 are two-digit integers.",
+        "rating": -1,
+        "is_solution": false,
+        "is_preferred_response": false
+      },
+      {
+        "instruction": "How many positive two-digit integers leave a remainder of 2 when divided by 8?",
+        "context_steps": 9,
+        "next_response": "Right, since 8*13+2 is 102.",
+        "rating": -1,
+        "is_solution": false,
+        "is_preferred_response": false
+      }
+    ],
+    "None": [
+      {
+        "instruction": "How many positive two-digit integers leave a remainder of 2 when divided by 8?",
+        "context_steps": 7,
+        "next_response": "And let's keep plugging numbers until we get a three-digit number.",
+        "rating": null,
+        "is_solution": false,
+        "is_preferred_response": true
+      },
+      {
+        "instruction": "The fifth and eighth terms of a geometric sequence of real numbers are $7!$ and $8!$ respectively. What is the first term?",
+        "context_steps": 3,
+        "next_response": "So, $r^3 = 8$.",
+        "rating": null,
+        "is_solution": false,
+        "is_preferred_response": true
+      }
+    ]
+  }
+}

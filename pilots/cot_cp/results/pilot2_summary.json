@@ -1,0 +1,8 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n": 300,
+  "accuracy": 0.9033333333333333,
+  "parse_failures": 0,
+  "wallclock_sec": 11.00755763053894,
+  "sec_per_question": 0.036691858768463134
+}

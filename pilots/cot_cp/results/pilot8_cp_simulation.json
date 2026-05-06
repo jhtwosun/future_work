@@ -1,0 +1,510 @@
+{
+  "alphas": [
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "logprob_based_GSM8K": [
+    {
+      "score": "lp_mean",
+      "alpha": 0.05,
+      "n_seeds": 100,
+      "target_coverage": 0.95,
+      "empirical_coverage_mean": 0.9490197983010126,
+      "empirical_coverage_std": 0.027033403752366025,
+      "kept_acc_mean": 0.9174358058716602,
+      "kept_frac_mean": 0.9346666666666666,
+      "q_hat_mean": -0.1363806782063778
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.05,
+      "n_seeds": 100,
+      "target_coverage": 0.95,
+      "empirical_coverage_mean": 0.9477255290372466,
+      "empirical_coverage_std": 0.027357067170580864,
+      "kept_acc_mean": 0.9105140843109658,
+      "kept_frac_mean": 0.9404666666666666,
+      "q_hat_mean": -0.30344475567217544
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.05,
+      "n_seeds": 100,
+      "target_coverage": 0.95,
+      "empirical_coverage_mean": 0.9498000548845319,
+      "empirical_coverage_std": 0.025512838696201523,
+      "kept_acc_mean": 0.9141469146716293,
+      "kept_frac_mean": 0.9388,
+      "q_hat_mean": -0.14257939427109328
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.05,
+      "n_seeds": 100,
+      "target_coverage": 0.95,
+      "empirical_coverage_mean": 0.9521948098373224,
+      "empirical_coverage_std": 0.023191748261608268,
+      "kept_acc_mean": 0.9096131604610294,
+      "kept_frac_mean": 0.9458666666666666,
+      "q_hat_mean": -0.13119258514197146
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.1,
+      "n_seeds": 100,
+      "target_coverage": 0.9,
+      "empirical_coverage_mean": 0.8977977955098301,
+      "empirical_coverage_std": 0.03376211726025253,
+      "kept_acc_mean": 0.9171172938753906,
+      "kept_frac_mean": 0.8845333333333332,
+      "q_hat_mean": -0.12501251123369506
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.1,
+      "n_seeds": 100,
+      "target_coverage": 0.9,
+      "empirical_coverage_mean": 0.8965960181970071,
+      "empirical_coverage_std": 0.03477249102936038,
+      "kept_acc_mean": 0.9136864071665074,
+      "kept_frac_mean": 0.8866666666666667,
+      "q_hat_mean": -0.26309127748647626
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.1,
+      "n_seeds": 100,
+      "target_coverage": 0.9,
+      "empirical_coverage_mean": 0.8962630548768138,
+      "empirical_coverage_std": 0.03807745185917354,
+      "kept_acc_mean": 0.9183137500897174,
+      "kept_frac_mean": 0.8819999999999999,
+      "q_hat_mean": -0.1271384940932346
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.1,
+      "n_seeds": 100,
+      "target_coverage": 0.9,
+      "empirical_coverage_mean": 0.8983288929951639,
+      "empirical_coverage_std": 0.032745563993872136,
+      "kept_acc_mean": 0.9181626620225394,
+      "kept_frac_mean": 0.8841333333333334,
+      "q_hat_mean": -0.11919826130297016
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.2,
+      "n_seeds": 100,
+      "target_coverage": 0.8,
+      "empirical_coverage_mean": 0.7894700839457611,
+      "empirical_coverage_std": 0.046141875170693805,
+      "kept_acc_mean": 0.9248884373234355,
+      "kept_frac_mean": 0.7713333333333334,
+      "q_hat_mean": -0.10888529549923763
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.2,
+      "n_seeds": 100,
+      "target_coverage": 0.8,
+      "empirical_coverage_mean": 0.7912097826405226,
+      "empirical_coverage_std": 0.04857769189284189,
+      "kept_acc_mean": 0.9237682344972541,
+      "kept_frac_mean": 0.7739999999999999,
+      "q_hat_mean": -0.2096991498707717
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.2,
+      "n_seeds": 100,
+      "target_coverage": 0.8,
+      "empirical_coverage_mean": 0.7911168584119302,
+      "empirical_coverage_std": 0.04593739467848455,
+      "kept_acc_mean": 0.935321876345226,
+      "kept_frac_mean": 0.7643333333333332,
+      "q_hat_mean": -0.11214385663831383
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.2,
+      "n_seeds": 100,
+      "target_coverage": 0.8,
+      "empirical_coverage_mean": 0.7930916570286441,
+      "empirical_coverage_std": 0.050679629500825586,
+      "kept_acc_mean": 0.9218845387468597,
+      "kept_frac_mean": 0.7772666666666668,
+      "q_hat_mean": -0.10141095343387273
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.3,
+      "n_seeds": 100,
+      "target_coverage": 0.7,
+      "empirical_coverage_mean": 0.6891109378498982,
+      "empirical_coverage_std": 0.05422919034773896,
+      "kept_acc_mean": 0.9326532298756911,
+      "kept_frac_mean": 0.6679333333333334,
+      "q_hat_mean": -0.09546002160999993
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.3,
+      "n_seeds": 100,
+      "target_coverage": 0.7,
+      "empirical_coverage_mean": 0.6949014461451292,
+      "empirical_coverage_std": 0.053440365205659805,
+      "kept_acc_mean": 0.9361770333809699,
+      "kept_frac_mean": 0.6707333333333334,
+      "q_hat_mean": -0.1710797954739763
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.3,
+      "n_seeds": 100,
+      "target_coverage": 0.7,
+      "empirical_coverage_mean": 0.6948330624400718,
+      "empirical_coverage_std": 0.052916406494494785,
+      "kept_acc_mean": 0.9348168463341926,
+      "kept_frac_mean": 0.6716000000000002,
+      "q_hat_mean": -0.1028282748827636
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.3,
+      "n_seeds": 100,
+      "target_coverage": 0.7,
+      "empirical_coverage_mean": 0.691110932307768,
+      "empirical_coverage_std": 0.05860886113131376,
+      "kept_acc_mean": 0.9286168138297335,
+      "kept_frac_mean": 0.6723999999999998,
+      "q_hat_mean": -0.09068519589184448
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.5,
+      "n_seeds": 100,
+      "target_coverage": 0.5,
+      "empirical_coverage_mean": 0.4933102505571213,
+      "empirical_coverage_std": 0.06254586883641532,
+      "kept_acc_mean": 0.9433960772445816,
+      "kept_frac_mean": 0.4723333333333333,
+      "q_hat_mean": -0.0781371337721735
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.5,
+      "n_seeds": 100,
+      "target_coverage": 0.5,
+      "empirical_coverage_mean": 0.4982439037825865,
+      "empirical_coverage_std": 0.061712472802451825,
+      "kept_acc_mean": 0.9589146473137687,
+      "kept_frac_mean": 0.4694,
+      "q_hat_mean": -0.12585107049585811
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.5,
+      "n_seeds": 100,
+      "target_coverage": 0.5,
+      "empirical_coverage_mean": 0.4926794618281759,
+      "empirical_coverage_std": 0.0630091608486098,
+      "kept_acc_mean": 0.9424403060992296,
+      "kept_frac_mean": 0.4723333333333333,
+      "q_hat_mean": -0.08521611735241148
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.5,
+      "n_seeds": 100,
+      "target_coverage": 0.5,
+      "empirical_coverage_mean": 0.4966746814663161,
+      "empirical_coverage_std": 0.06652328264681599,
+      "kept_acc_mean": 0.9404720477886468,
+      "kept_frac_mean": 0.47706666666666664,
+      "q_hat_mean": -0.07250153664443085
+    }
+  ],
+  "sc_based_GSM8K": [
+    {
+      "score": "sc_top1",
+      "alpha": 0.05,
+      "n_seeds": 100,
+      "target_coverage": 0.95,
+      "empirical_coverage_mean": 0.9581484595145922,
+      "empirical_coverage_std": 0.031338635483047564,
+      "kept_acc_mean": 0.9659551635956682,
+      "kept_frac_mean": 0.9322666666666667,
+      "q_hat_mean": 0.6729727365223408
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.1,
+      "n_seeds": 100,
+      "target_coverage": 0.9,
+      "empirical_coverage_mean": 0.9278895794634413,
+      "empirical_coverage_std": 0.048060304261425595,
+      "kept_acc_mean": 0.9708245508776686,
+      "kept_frac_mean": 0.8982666666666667,
+      "q_hat_mean": 0.7636553532083377
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.2,
+      "n_seeds": 100,
+      "target_coverage": 0.8,
+      "empirical_coverage_mean": 0.8286068994502067,
+      "empirical_coverage_std": 0.0724177051501615,
+      "kept_acc_mean": 0.9777598921600511,
+      "kept_frac_mean": 0.7966666666666667,
+      "q_hat_mean": 0.9010418222606453
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.3,
+      "n_seeds": 100,
+      "target_coverage": 0.7,
+      "empirical_coverage_mean": 0.764470162495671,
+      "empirical_coverage_std": 0.04087731647117459,
+      "kept_acc_mean": 0.9827296086102625,
+      "kept_frac_mean": 0.7310666666666669,
+      "q_hat_mean": 0.9972517650660998
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.5,
+      "n_seeds": 100,
+      "target_coverage": 0.5,
+      "empirical_coverage_mean": 0.7638987339242425,
+      "empirical_coverage_std": 0.0387222248559917,
+      "kept_acc_mean": 0.982864996098591,
+      "kept_frac_mean": 0.7304,
+      "q_hat_mean": 1.0
+    }
+  ],
+  "logprob_based_MATH500": [
+    {
+      "score": "lp_mean",
+      "alpha": 0.05,
+      "n_seeds": 100,
+      "target_coverage": 0.95,
+      "empirical_coverage_mean": 0.9464117340390716,
+      "empirical_coverage_std": 0.027262783072556102,
+      "kept_acc_mean": 0.5256914005449357,
+      "kept_frac_mean": 0.92548,
+      "q_hat_mean": -0.13438827967990555
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.05,
+      "n_seeds": 100,
+      "target_coverage": 0.95,
+      "empirical_coverage_mean": 0.9481328494243683,
+      "empirical_coverage_std": 0.027205698869587062,
+      "kept_acc_mean": 0.5217233887705721,
+      "kept_frac_mean": 0.93448,
+      "q_hat_mean": -0.365154848177958
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.05,
+      "n_seeds": 100,
+      "target_coverage": 0.95,
+      "empirical_coverage_mean": 0.9423117755489373,
+      "empirical_coverage_std": 0.0304986223012404,
+      "kept_acc_mean": 0.5294413781749627,
+      "kept_frac_mean": 0.9150000000000001,
+      "q_hat_mean": -0.1345509178575806
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.05,
+      "n_seeds": 100,
+      "target_coverage": 0.95,
+      "empirical_coverage_mean": 0.9456053509792315,
+      "empirical_coverage_std": 0.027977425425693387,
+      "kept_acc_mean": 0.5244866824784047,
+      "kept_frac_mean": 0.9268000000000001,
+      "q_hat_mean": -0.13143001331343737
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.1,
+      "n_seeds": 100,
+      "target_coverage": 0.9,
+      "empirical_coverage_mean": 0.8939210118246486,
+      "empirical_coverage_std": 0.03733135410539106,
+      "kept_acc_mean": 0.5366800445126717,
+      "kept_frac_mean": 0.8562799999999998,
+      "q_hat_mean": -0.1177360396961521
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.1,
+      "n_seeds": 100,
+      "target_coverage": 0.9,
+      "empirical_coverage_mean": 0.8961571897740513,
+      "empirical_coverage_std": 0.041375835624113594,
+      "kept_acc_mean": 0.5486699475077164,
+      "kept_frac_mean": 0.83968,
+      "q_hat_mean": -0.29200577732917415
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.1,
+      "n_seeds": 100,
+      "target_coverage": 0.9,
+      "empirical_coverage_mean": 0.8897399658944869,
+      "empirical_coverage_std": 0.04027962209120572,
+      "kept_acc_mean": 0.5348150592889109,
+      "kept_frac_mean": 0.8550800000000003,
+      "q_hat_mean": -0.11784054342907944
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.1,
+      "n_seeds": 100,
+      "target_coverage": 0.9,
+      "empirical_coverage_mean": 0.8937324578917932,
+      "empirical_coverage_std": 0.03742730371081309,
+      "kept_acc_mean": 0.5275590462211812,
+      "kept_frac_mean": 0.8708000000000001,
+      "q_hat_mean": -0.11058966224033727
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.2,
+      "n_seeds": 100,
+      "target_coverage": 0.8,
+      "empirical_coverage_mean": 0.7945011082444285,
+      "empirical_coverage_std": 0.04815707950277314,
+      "kept_acc_mean": 0.548338537254054,
+      "kept_frac_mean": 0.7447999999999999,
+      "q_hat_mean": -0.10179407872702638
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.2,
+      "n_seeds": 100,
+      "target_coverage": 0.8,
+      "empirical_coverage_mean": 0.7902972456369067,
+      "empirical_coverage_std": 0.05122566136420211,
+      "kept_acc_mean": 0.5636105540015637,
+      "kept_frac_mean": 0.7207999999999999,
+      "q_hat_mean": -0.2438693176403966
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.2,
+      "n_seeds": 100,
+      "target_coverage": 0.8,
+      "empirical_coverage_mean": 0.7926116060850222,
+      "empirical_coverage_std": 0.04456603794987149,
+      "kept_acc_mean": 0.5438527390003344,
+      "kept_frac_mean": 0.7490799999999999,
+      "q_hat_mean": -0.10000747142482892
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.2,
+      "n_seeds": 100,
+      "target_coverage": 0.8,
+      "empirical_coverage_mean": 0.7964508855525658,
+      "empirical_coverage_std": 0.049903789046791866,
+      "kept_acc_mean": 0.5294909907647881,
+      "kept_frac_mean": 0.773,
+      "q_hat_mean": -0.09325988186336799
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.3,
+      "n_seeds": 100,
+      "target_coverage": 0.7,
+      "empirical_coverage_mean": 0.6944063746304956,
+      "empirical_coverage_std": 0.05874668434527118,
+      "kept_acc_mean": 0.5581663758391769,
+      "kept_frac_mean": 0.63916,
+      "q_hat_mean": -0.08777720704892802
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.3,
+      "n_seeds": 100,
+      "target_coverage": 0.7,
+      "empirical_coverage_mean": 0.6844018241112001,
+      "empirical_coverage_std": 0.05979090410376896,
+      "kept_acc_mean": 0.5705356132818556,
+      "kept_frac_mean": 0.6166,
+      "q_hat_mean": -0.20866510305294675
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.3,
+      "n_seeds": 100,
+      "target_coverage": 0.7,
+      "empirical_coverage_mean": 0.6929045160542373,
+      "empirical_coverage_std": 0.05223477862730298,
+      "kept_acc_mean": 0.5428570288818928,
+      "kept_frac_mean": 0.6555599999999999,
+      "q_hat_mean": -0.08707780839289322
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.3,
+      "n_seeds": 100,
+      "target_coverage": 0.7,
+      "empirical_coverage_mean": 0.6995728940266148,
+      "empirical_coverage_std": 0.04872272431695567,
+      "kept_acc_mean": 0.5283955093652112,
+      "kept_frac_mean": 0.6802799999999999,
+      "q_hat_mean": -0.08069877663206113
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.5,
+      "n_seeds": 100,
+      "target_coverage": 0.5,
+      "empirical_coverage_mean": 0.4967246491147175,
+      "empirical_coverage_std": 0.06201637808856294,
+      "kept_acc_mean": 0.5803802243387494,
+      "kept_frac_mean": 0.4393999999999999,
+      "q_hat_mean": -0.07143543324856477
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.5,
+      "n_seeds": 100,
+      "target_coverage": 0.5,
+      "empirical_coverage_mean": 0.49084149078985995,
+      "empirical_coverage_std": 0.0624470839965553,
+      "kept_acc_mean": 0.6149856034129595,
+      "kept_frac_mean": 0.4103599999999999,
+      "q_hat_mean": -0.15660810809701542
+    },
+    {
+      "score": "lp_tok",
+      "alpha": 0.5,
+      "n_seeds": 100,
+      "target_coverage": 0.5,
+      "empirical_coverage_mean": 0.49409524726506726,
+      "empirical_coverage_std": 0.06465099778660513,
+      "kept_acc_mean": 0.5235841827148496,
+      "kept_frac_mean": 0.4838,
+      "q_hat_mean": -0.0716816879226354
+    },
+    {
+      "score": "lp_median",
+      "alpha": 0.5,
+      "n_seeds": 100,
+      "target_coverage": 0.5,
+      "empirical_coverage_mean": 0.497604828153325,
+      "empirical_coverage_std": 0.06164052850494474,
+      "kept_acc_mean": 0.5383753160164985,
+      "kept_frac_mean": 0.47456,
+      "q_hat_mean": -0.06264832506426075
+    }
+  ]
+}

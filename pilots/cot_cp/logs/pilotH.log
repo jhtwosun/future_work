@@ -1,0 +1,17 @@
+Loaded 200 R1 traces
+[K= 1  lp_mean  ] groups~62.3  ρ=+0.204  CP@0.3 acc=0.631/0.64  CP@0.5 acc=0.695/0.42
+[K= 1  lp_min   ] groups~62.3  ρ=+0.152  CP@0.3 acc=0.630/0.65  CP@0.5 acc=0.671/0.44
+[K= 1  lp_median] groups~62.3  ρ=+0.134  CP@0.3 acc=0.628/0.64  CP@0.5 acc=0.620/0.46
+[K= 2  lp_mean  ] groups~31.4  ρ=+0.129  CP@0.3 acc=0.612/0.66  CP@0.5 acc=0.654/0.45
+[K= 2  lp_min   ] groups~31.4  ρ=+0.267  CP@0.3 acc=0.679/0.61  CP@0.5 acc=0.718/0.41
+[K= 2  lp_median] groups~31.4  ρ=+0.027  CP@0.3 acc=0.604/0.67  CP@0.5 acc=0.578/0.51
+[K= 5  lp_mean  ] groups~12.9  ρ=+0.137  CP@0.3 acc=0.618/0.65  CP@0.5 acc=0.618/0.47
+[K= 5  lp_min   ] groups~12.9  ρ=+0.198  CP@0.3 acc=0.655/0.62  CP@0.5 acc=0.672/0.43
+[K= 5  lp_median] groups~12.9  ρ=+0.098  CP@0.3 acc=0.624/0.65  CP@0.5 acc=0.597/0.49
+[K=10  lp_mean  ] groups~6.7  ρ=+0.117  CP@0.3 acc=0.609/0.67  CP@0.5 acc=0.605/0.48
+[K=10  lp_min   ] groups~6.7  ρ=+0.199  CP@0.3 acc=0.635/0.64  CP@0.5 acc=0.689/0.42
+[K=10  lp_median] groups~6.7  ρ=+0.099  CP@0.3 acc=0.606/0.67  CP@0.5 acc=0.610/0.47
+[K=20  lp_mean  ] groups~3.6  ρ=+0.196  CP@0.3 acc=0.649/0.63  CP@0.5 acc=0.670/0.43
+[K=20  lp_min   ] groups~3.6  ρ=+0.199  CP@0.3 acc=0.646/0.62  CP@0.5 acc=0.664/0.43
+[K=20  lp_median] groups~3.6  ρ=+0.190  CP@0.3 acc=0.661/0.62  CP@0.5 acc=0.668/0.43
+Wrote: /home/nvidia/future/pilots/cot_cp/results/pilotH_grouped_analysis.json

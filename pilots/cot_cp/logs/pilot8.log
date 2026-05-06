@@ -1,0 +1,49 @@
+LP-score records: 300, accuracy=0.903
+SC-score records: 150, accuracy=0.940
+[GSM8K LP/lp_mean α=0.05] target=0.95 cov=0.949 keepacc=0.917 keep%=0.93
+[GSM8K LP/lp_min α=0.05] target=0.95 cov=0.948 keepacc=0.911 keep%=0.94
+[GSM8K LP/lp_tok α=0.05] target=0.95 cov=0.950 keepacc=0.914 keep%=0.94
+[GSM8K LP/lp_median α=0.05] target=0.95 cov=0.952 keepacc=0.910 keep%=0.95
+[GSM8K SC α=0.05] target=0.95 cov=0.958 keepacc=0.966 keep%=0.93
+[GSM8K LP/lp_mean α=0.1] target=0.90 cov=0.898 keepacc=0.917 keep%=0.88
+[GSM8K LP/lp_min α=0.1] target=0.90 cov=0.897 keepacc=0.914 keep%=0.89
+[GSM8K LP/lp_tok α=0.1] target=0.90 cov=0.896 keepacc=0.918 keep%=0.88
+[GSM8K LP/lp_median α=0.1] target=0.90 cov=0.898 keepacc=0.918 keep%=0.88
+[GSM8K SC α=0.1] target=0.90 cov=0.928 keepacc=0.971 keep%=0.90
+[GSM8K LP/lp_mean α=0.2] target=0.80 cov=0.789 keepacc=0.925 keep%=0.77
+[GSM8K LP/lp_min α=0.2] target=0.80 cov=0.791 keepacc=0.924 keep%=0.77
+[GSM8K LP/lp_tok α=0.2] target=0.80 cov=0.791 keepacc=0.935 keep%=0.76
+[GSM8K LP/lp_median α=0.2] target=0.80 cov=0.793 keepacc=0.922 keep%=0.78
+[GSM8K SC α=0.2] target=0.80 cov=0.829 keepacc=0.978 keep%=0.80
+[GSM8K LP/lp_mean α=0.3] target=0.70 cov=0.689 keepacc=0.933 keep%=0.67
+[GSM8K LP/lp_min α=0.3] target=0.70 cov=0.695 keepacc=0.936 keep%=0.67
+[GSM8K LP/lp_tok α=0.3] target=0.70 cov=0.695 keepacc=0.935 keep%=0.67
+[GSM8K LP/lp_median α=0.3] target=0.70 cov=0.691 keepacc=0.929 keep%=0.67
+[GSM8K SC α=0.3] target=0.70 cov=0.764 keepacc=0.983 keep%=0.73
+[GSM8K LP/lp_mean α=0.5] target=0.50 cov=0.493 keepacc=0.943 keep%=0.47
+[GSM8K LP/lp_min α=0.5] target=0.50 cov=0.498 keepacc=0.959 keep%=0.47
+[GSM8K LP/lp_tok α=0.5] target=0.50 cov=0.493 keepacc=0.942 keep%=0.47
+[GSM8K LP/lp_median α=0.5] target=0.50 cov=0.497 keepacc=0.940 keep%=0.48
+[GSM8K SC α=0.5] target=0.50 cov=0.764 keepacc=0.983 keep%=0.73
+MATH LP-score records: 500, accuracy=0.516
+[MATH LP/lp_mean α=0.05] target=0.95 cov=0.946 keepacc=0.526 keep%=0.93
+[MATH LP/lp_min α=0.05] target=0.95 cov=0.948 keepacc=0.522 keep%=0.93
+[MATH LP/lp_tok α=0.05] target=0.95 cov=0.942 keepacc=0.529 keep%=0.92
+[MATH LP/lp_median α=0.05] target=0.95 cov=0.946 keepacc=0.524 keep%=0.93
+[MATH LP/lp_mean α=0.1] target=0.90 cov=0.894 keepacc=0.537 keep%=0.86
+[MATH LP/lp_min α=0.1] target=0.90 cov=0.896 keepacc=0.549 keep%=0.84
+[MATH LP/lp_tok α=0.1] target=0.90 cov=0.890 keepacc=0.535 keep%=0.86
+[MATH LP/lp_median α=0.1] target=0.90 cov=0.894 keepacc=0.528 keep%=0.87
+[MATH LP/lp_mean α=0.2] target=0.80 cov=0.795 keepacc=0.548 keep%=0.74
+[MATH LP/lp_min α=0.2] target=0.80 cov=0.790 keepacc=0.564 keep%=0.72
+[MATH LP/lp_tok α=0.2] target=0.80 cov=0.793 keepacc=0.544 keep%=0.75
+[MATH LP/lp_median α=0.2] target=0.80 cov=0.796 keepacc=0.529 keep%=0.77
+[MATH LP/lp_mean α=0.3] target=0.70 cov=0.694 keepacc=0.558 keep%=0.64
+[MATH LP/lp_min α=0.3] target=0.70 cov=0.684 keepacc=0.571 keep%=0.62
+[MATH LP/lp_tok α=0.3] target=0.70 cov=0.693 keepacc=0.543 keep%=0.66
+[MATH LP/lp_median α=0.3] target=0.70 cov=0.700 keepacc=0.528 keep%=0.68
+[MATH LP/lp_mean α=0.5] target=0.50 cov=0.497 keepacc=0.580 keep%=0.44
+[MATH LP/lp_min α=0.5] target=0.50 cov=0.491 keepacc=0.615 keep%=0.41
+[MATH LP/lp_tok α=0.5] target=0.50 cov=0.494 keepacc=0.524 keep%=0.48
+[MATH LP/lp_median α=0.5] target=0.50 cov=0.498 keepacc=0.538 keep%=0.47
+Wrote: /home/nvidia/future/pilots/cot_cp/results/pilot8_cp_simulation.json

@@ -12,9 +12,9 @@ our paper:
 
 | $k$ | Score $\phi_k$ | Cost $c_k$ (multiples of one greedy decode) |
 |---|---|---|
-| 1 | $\phi_{\mathrm{lp}}(R) = \min_t \frac{1}{|S_{i,t}|}\sum_{u} \log p_\theta(s_{i,t,u} | \cdot)$ | $1\times$ |
+| 1 | $\phi_{\mathrm{lp}}(R) = \min_t \frac{1}{\lvert S_{i,t}\rvert}\sum_{u} \log p_\theta(s_{i,t,u} \mid \cdot)$ | $1\times$ |
 | 2 | $\phi_{\mathrm{prm}}(R) = \min_t \mathrm{PRM}(s_{i,t}; X)$ | $2\times$ (1 generator + 1 PRM forward) |
-| 3 | $\phi_{\mathrm{sc}}(X) = \frac{|\{j : \hat{Y}_j = \mathrm{maj}\}|}{N}$ | $N\times$ (sample $N$ trajectories) |
+| 3 | $\phi_{\mathrm{sc}}(X) = \frac{\lvert\{j : \hat{Y}_j = \mathrm{maj}\}\rvert}{N}$ | $N\times$ (sample $N$ trajectories) |
 
 Every score $\phi_k$ induces a CP procedure: calibrate
 $\hat{q}_\alpha^{(k)}$ from labeled calibration data, keep test point

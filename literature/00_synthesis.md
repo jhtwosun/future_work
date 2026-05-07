@@ -107,7 +107,7 @@
 | # | Paper | Venue | Why threatening | What CG-VL adds |
 |---|---|---|---|---|
 | 1 | **C-PMI: Conditional PMI Calibrated Decoding for VLMs** ([2505.19678](https://arxiv.org/abs/2505.19678)) | **NeurIPS 2025** | Same name (PMI), same modality (VLM), same target (hallucination) | C-PMI is a decoding-time bi-level optimization; CG-VL uses PMI as fixed *conformity score* with α-bound |
-| 2 | **M3ID** (Favero et al. [2403.14003](https://arxiv.org/abs/2403.14003)) | CVPR 2024 | Uses $\log p(y|I,q)-\log p(y|q)$ as sampling objective — exact same quantity | M3ID has no α-guarantee; CG-VL's null is `I_shuffle` (not unconditioned LM), isolating spatial-semantic grounding; abstention not sampling |
+| 2 | **M3ID** (Favero et al. [2403.14003](https://arxiv.org/abs/2403.14003)) | CVPR 2024 | Uses $\log p(y \mid I,q)-\log p(y \mid q)$ as sampling objective — exact same quantity | M3ID has no α-guarantee; CG-VL's null is `I_shuffle` (not unconditioned LM), isolating spatial-semantic grounding; abstention not sampling |
 | 3 | **Inductive CP for LVLMs** (Z. Wang et al. [2504.17671](https://arxiv.org/abs/2504.17671)) | arXiv 2025 | Direct CP-for-VLM precedent | Closed-set MCQ-VQA with softmax scores; CG-VL is open-ended generation with PMI score and abstention |
 | 4 | **IBD — Image-Biased Decoding** ([2402.18476](https://arxiv.org/abs/2402.18476)) | 2024 | Image-biased model − base model ≈ PMI in disguise | IBD requires *training* a biased model; CG-VL is training-free, single forward pair |
 | 5 | **PAI — Pay Attention to Image** ([2407.21771](https://arxiv.org/abs/2407.21771)) | ECCV 2024 | Subtracts pure-text logits from multimodal logits — algebraically PMI | No calibration / α-bound; CG-VL adds CP wrapper |

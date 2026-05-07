@@ -1,0 +1,46 @@
+{
+  "model": "microsoft/phi-4",
+  "tag": "phi4",
+  "dataset": "aime",
+  "n": 200,
+  "vanilla_acc": 0.345,
+  "results": {
+    "K4_lp_select": {
+      "acc": 0.33,
+      "delta": -0.014999999999999958,
+      "n": 200
+    },
+    "K4_majority_baseline": {
+      "acc": 0.365,
+      "delta": 0.020000000000000018,
+      "n": 200
+    },
+    "K2_K4_escalation": {
+      "acc": 0.37,
+      "delta": 0.025000000000000022,
+      "n": 200,
+      "avg_extra_decode_cost": 4.14,
+      "esc_frac": 0.535
+    },
+    "K4_T1": {
+      "acc": 0.36,
+      "delta": 0.015000000000000013,
+      "n": 200
+    },
+    "K8_majority": {
+      "acc": 0.4,
+      "delta": 0.05500000000000005,
+      "n": 200
+    },
+    "K4_majority_entropy_trigger": {
+      "acc": 0.35,
+      "delta": 0.0050000000000000044,
+      "n": 200
+    },
+    "multi_worst_K2": {
+      "acc": 0.37,
+      "delta": 0.025000000000000022,
+      "n": 200
+    }
+  }
+}

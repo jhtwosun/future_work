@@ -1,0 +1,46 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "tag": "qwen25_7b",
+  "dataset": "olympiad",
+  "n": 200,
+  "vanilla_acc": 0.445,
+  "results": {
+    "K4_lp_select": {
+      "acc": 0.4,
+      "delta": -0.044999999999999984,
+      "n": 200
+    },
+    "K4_majority_baseline": {
+      "acc": 0.46,
+      "delta": 0.015000000000000013,
+      "n": 200
+    },
+    "K2_K4_escalation": {
+      "acc": 0.445,
+      "delta": 0.0,
+      "n": 200,
+      "avg_extra_decode_cost": 4.08,
+      "esc_frac": 0.52
+    },
+    "K4_T1": {
+      "acc": 0.445,
+      "delta": 0.0,
+      "n": 200
+    },
+    "K8_majority": {
+      "acc": 0.415,
+      "delta": -0.030000000000000027,
+      "n": 200
+    },
+    "K4_majority_entropy_trigger": {
+      "acc": 0.44,
+      "delta": -0.0050000000000000044,
+      "n": 200
+    },
+    "multi_worst_K2": {
+      "acc": 0.43,
+      "delta": -0.015000000000000013,
+      "n": 200
+    }
+  }
+}

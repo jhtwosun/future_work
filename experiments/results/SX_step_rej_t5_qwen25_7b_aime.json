@@ -1,0 +1,39 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "tag": "qwen25_7b",
+  "dataset": "aime",
+  "n": 200,
+  "vanilla_acc": 0.27,
+  "gate_frac": 0.5,
+  "lp_threshold": -0.18976300879995767,
+  "ent_threshold": 0.1379036559093556,
+  "results": {
+    "gate_lp_min_K4": {
+      "acc": 0.29,
+      "delta": 0.019999999999999962,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_ent_mean_K4": {
+      "acc": 0.29,
+      "delta": 0.019999999999999962,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_either_K4": {
+      "acc": 0.285,
+      "delta": 0.014999999999999958,
+      "n": 200,
+      "flagged_n": 136,
+      "avg_compute": 3.72
+    },
+    "always_K4_baseline": {
+      "acc": 0.325,
+      "delta": 0.05499999999999999,
+      "n": 200,
+      "avg_compute": 5.0
+    }
+  }
+}

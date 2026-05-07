@@ -1,0 +1,39 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "tag": "qwen25_7b",
+  "dataset": "olympiad",
+  "n": 200,
+  "vanilla_acc": 0.445,
+  "gate_frac": 0.5,
+  "lp_threshold": -0.18832135814193673,
+  "ent_threshold": 0.14517158118598106,
+  "results": {
+    "gate_lp_min_K4": {
+      "acc": 0.455,
+      "delta": 0.010000000000000009,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_ent_mean_K4": {
+      "acc": 0.47,
+      "delta": 0.024999999999999967,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_either_K4": {
+      "acc": 0.45,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 134,
+      "avg_compute": 3.68
+    },
+    "always_K4_baseline": {
+      "acc": 0.435,
+      "delta": -0.010000000000000009,
+      "n": 200,
+      "avg_compute": 5.0
+    }
+  }
+}

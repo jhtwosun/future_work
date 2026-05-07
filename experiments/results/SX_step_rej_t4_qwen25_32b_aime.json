@@ -1,0 +1,34 @@
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "tag": "qwen25_32b",
+  "dataset": "aime",
+  "n": 200,
+  "vanilla_acc": 0.395,
+  "results": {
+    "K4_select_entropy_min": {
+      "acc": 0.39,
+      "delta": -0.0050000000000000044,
+      "n": 200
+    },
+    "K4_select_lp_max": {
+      "acc": 0.4,
+      "delta": 0.0050000000000000044,
+      "n": 200
+    },
+    "K4_filter_arith_majority": {
+      "acc": 0.42,
+      "delta": 0.024999999999999967,
+      "n": 200
+    },
+    "K4_majority_baseline": {
+      "acc": 0.45,
+      "delta": 0.05499999999999999,
+      "n": 200
+    },
+    "K4_consensus_3plus": {
+      "acc": 0.44,
+      "delta": 0.044999999999999984,
+      "n": 200
+    }
+  }
+}

@@ -385,6 +385,44 @@ Holm sequential, e-process 등은 future work. 현재 A vs B로 선명한 trade-
 - prov_anchor_K2 (provisional answer hint)는 약함 — 힌트가 diversity 줄이거나 greedy와 일치
 - 어려운 cell (AIME)에서 multi-step이 single-K4와 비슷한 lift
 
+### Tier 4 검증 결과 — Advanced selection (12 cells)
+
+5 methods: K4_majority_baseline, K4_select_entropy_min, K4_select_lp_max, K4_filter_arith_majority, K4_consensus_3plus
+
+**핵심 발견:**
+- **K4_majority_baseline이 여전히 dominant** (대부분 cell 1등 또는 tied)
+- **K4_consensus_3plus** (3+ 동의해야만 accept) close second — sometimes ties
+- **K4_filter_arith_majority** (arith_violations 있는 alt 제외 후 vote) — neutral, 가끔 +0.5pp
+- **K4_select_entropy_min / K4_select_lp_max** consistently negative (-1 ~ -5pp) — 단일 점수로 alt 선택은 majority보다 나쁨
+
+**의미**: K=4 alts에서 1개를 score로 고르기보다 모두 vote하는 게 robust.
+
+### Tier 5 검증 결과 — Combined CP + step rejection (6 cells, 7Bs)
+
+3 gate methods × always-K4 baseline. Gate score < threshold일 때만 K=4 majority 적용.
+
+| Cell | vanilla | always_K4 (5×) | gate_ent_mean_K4 (3×) | gate_lp_min_K4 (3×) |
+|---|---|---|---|---|
+| **7B Olympiad** | 0.445 | -1.0pp | **+2.5pp** ⭐ | +1.0pp |
+| **Math-7B AIME** | 0.390 | +1.0pp | **+2.0pp** ⭐ | 0pp |
+| Math-7B Olympiad | 0.450 | +1.0pp | +1.0pp | +0.5pp |
+| 7B AIME | 0.270 | +5.5pp | +2.0pp | +2.0pp |
+| 7B math500 | 0.745 | +3.0pp | +2.5pp | 0pp |
+| Math-7B math500 | 0.800 | +0.5pp | -0.5pp | -1.5pp |
+
+**🔥 핵심 발견 — gate_ent_mean_K4가 always_K4보다 더 좋거나 동등하면서 40% 저렴:**
+
+평균:
+- always_K4 cost 5×: +1.7pp avg
+- **gate_ent_mean_K4 cost 3×: +1.6pp avg** (similar lift, 40% cheaper!)
+
+특히:
+- **7B Olympiad**: always_K4가 −1.0pp loss인데 gate_ent_mean이 +2.5pp gain — entropy_mean signal이 "어떤 trace에서 K=4가 도움될지"를 잘 잡음
+- **Math-7B AIME**: gate +2.0pp vs always +1.0pp — gate가 베이스라인보다 +1pp 더 lift
+- **Math-7B math500**: 강한 모델 + 쉬운 dataset에서 always_K4도 K=4 gating도 모두 약함 (saturation)
+
+**Paper에 critical finding**: re-roll을 항상 하지 말고 **entropy_mean으로 confidence 낮은 trace에만** 적용하면 비용 절약 + 가끔 정확도까지 개선.
+
 ---
 
 ## 13. Updated paper narrative (현재 시점 — 2 layer 구조)

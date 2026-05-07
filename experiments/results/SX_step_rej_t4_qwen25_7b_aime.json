@@ -1,0 +1,34 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "tag": "qwen25_7b",
+  "dataset": "aime",
+  "n": 200,
+  "vanilla_acc": 0.27,
+  "results": {
+    "K4_select_entropy_min": {
+      "acc": 0.25,
+      "delta": -0.020000000000000018,
+      "n": 200
+    },
+    "K4_select_lp_max": {
+      "acc": 0.255,
+      "delta": -0.015000000000000013,
+      "n": 200
+    },
+    "K4_filter_arith_majority": {
+      "acc": 0.29,
+      "delta": 0.019999999999999962,
+      "n": 200
+    },
+    "K4_majority_baseline": {
+      "acc": 0.32,
+      "delta": 0.04999999999999999,
+      "n": 200
+    },
+    "K4_consensus_3plus": {
+      "acc": 0.305,
+      "delta": 0.034999999999999976,
+      "n": 200
+    }
+  }
+}

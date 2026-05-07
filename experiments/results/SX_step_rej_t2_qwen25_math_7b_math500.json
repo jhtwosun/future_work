@@ -1,0 +1,46 @@
+{
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "tag": "qwen25_math_7b",
+  "dataset": "math500",
+  "n": 200,
+  "vanilla_acc": 0.8,
+  "results": {
+    "K4_lp_select": {
+      "acc": 0.77,
+      "delta": -0.030000000000000027,
+      "n": 200
+    },
+    "K4_majority_baseline": {
+      "acc": 0.79,
+      "delta": -0.010000000000000009,
+      "n": 200
+    },
+    "K2_K4_escalation": {
+      "acc": 0.81,
+      "delta": 0.010000000000000009,
+      "n": 200,
+      "avg_extra_decode_cost": 2.76,
+      "esc_frac": 0.19
+    },
+    "K4_T1": {
+      "acc": 0.8,
+      "delta": 0.0,
+      "n": 200
+    },
+    "K8_majority": {
+      "acc": 0.795,
+      "delta": -0.0050000000000000044,
+      "n": 200
+    },
+    "K4_majority_entropy_trigger": {
+      "acc": 0.815,
+      "delta": 0.014999999999999902,
+      "n": 200
+    },
+    "multi_worst_K2": {
+      "acc": 0.81,
+      "delta": 0.010000000000000009,
+      "n": 200
+    }
+  }
+}

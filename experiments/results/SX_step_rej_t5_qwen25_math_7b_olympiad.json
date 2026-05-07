@@ -1,0 +1,39 @@
+{
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "tag": "qwen25_math_7b",
+  "dataset": "olympiad",
+  "n": 200,
+  "vanilla_acc": 0.45,
+  "gate_frac": 0.5,
+  "lp_threshold": -0.1577251530585552,
+  "ent_threshold": 0.12943384482749692,
+  "results": {
+    "gate_lp_min_K4": {
+      "acc": 0.455,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_ent_mean_K4": {
+      "acc": 0.46,
+      "delta": 0.010000000000000009,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_either_K4": {
+      "acc": 0.45,
+      "delta": 0.0,
+      "n": 200,
+      "flagged_n": 127,
+      "avg_compute": 3.54
+    },
+    "always_K4_baseline": {
+      "acc": 0.46,
+      "delta": 0.010000000000000009,
+      "n": 200,
+      "avg_compute": 5.0
+    }
+  }
+}

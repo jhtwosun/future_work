@@ -448,6 +448,59 @@ Holm sequential, e-process 등은 future work. 현재 A vs B로 선명한 trade-
 3. **Hard problems (AIME)**: `gate_ent_K8` or `always_K4` at 5× cost
 4. **Olympiad**: `gate_ent_K4` (cheap, effective)
 
+### Pareto Frontier 검증 — 4 models × 3 datasets × 30 strategies (360 evaluations)
+
+3 gate scores × 3 gate fractions (0.25, 0.5, 0.75) × 3 K values (2, 4, 8) + 3 always_K baselines = 30 strategies per cell.
+
+**Top by avg accuracy (12 cells):**
+
+| Method | Avg Δ | Cost | pp/× |
+|---|---|---|---|
+| **`gate_combined_f0.75_K8`** | **+2.17pp** | 8.62× | 0.0028 |
+| `gate_combined_f0.5_K8` | +2.12pp | 7.92× | 0.0031 |
+| `always_K4` | +2.08pp | 5.00× | 0.0052 |
+| `always_K8` | +2.00pp | 9.00× | 0.0025 |
+| **`gate_combined_f0.5_K4`** | **+1.92pp** | **4.46×** | **0.0055** ⭐ |
+| `gate_combined_f0.75_K4` | +1.79pp | 4.81× | 0.0047 |
+| `always_K2` | +1.37pp | 3.00× | 0.0069 |
+| `gate_ent_f0.5_K4` | +1.29pp | 3.00× | 0.0065 |
+
+**Top by cost-efficiency:**
+1. `gate_ent_f0.25_K2` (1.5× cost): +0.37pp, **0.0075 pp/×** — cheapest with positive lift
+2. `always_K2` (3×): +1.37pp, 0.0069 pp/×
+3. `gate_ent_f0.5_K4` (3×): +1.29pp, 0.0065 pp/×
+
+**Per-cell winners (highest accuracy):**
+
+| Model | Dataset | best method | Δ | cost |
+|---|---|---|---|---|
+| Phi-4 | AIME | gate_combined_f0.75_K8 | +4.5pp | 8.84× |
+| Phi-4 | math500 | gate_ent_f0.75_K4 | +1.5pp | 4.00× |
+| Phi-4 | olympiad | gate_lp_f0.25_K8 | +2.5pp | 3.00× |
+| Qwen2.5-32B | AIME | gate_combined_f0.25_K8 | **+7.5pp** | 7.04× |
+| Qwen2.5-32B | math500 | gate_ent_f0.75_K2 | +1.0pp | 2.50× |
+| Qwen2.5-32B | olympiad | gate_ent_f0.5_K8 | +3.5pp | 5.00× |
+| **Qwen2.5-7B** | **AIME** | **always_K8** | **+8.0pp** | 9.00× |
+| Qwen2.5-7B | math500 | always_K4 | +4.0pp | 5.00× |
+| Qwen2.5-7B | olympiad | gate_ent_f0.5_K4 | +2.5pp | 3.00× |
+| Math-7B | AIME | gate_ent_f0.75_K8 | +5.0pp | 7.00× |
+| Math-7B | math500 | gate_combined_f0.75_K2 | +0.5pp | 2.88× |
+| Math-7B | olympiad | gate_combined_f0.25_K8 | +2.5pp | 5.84× |
+
+**Pareto frontier 핵심 발견:**
+
+1. **Hard problems (AIME)**: K=8 가치 있음. always_K8이나 gate_combined_f0.25_K8 같은 큰 compute 필요. 약한 모델일수록 큰 K 효과 ↑.
+2. **Easy problems (math500 saturated cells)**: K=2 충분. Math-7B에서 gate_combined_f0.75_K2 +0.5pp가 max.
+3. **Olympiad**: 중간 — gate_ent_f0.5_K4 또는 gate_lp_f0.25_K8 같은 mid-tier compute가 효과적.
+4. **gate_combined (entropy ∨ lp ∨ arith)**: 단일 score gate보다 robust. high-precision detection이 K=4/8 지출 가치를 높임.
+5. **Best universal balance**: `gate_combined_f0.5_K4` at 4.46× cost (+1.92pp, 0.0055 pp/×).
+
+**Paper에 적합한 cost-tier 추천:**
+- **Tier A (cheap, 2-3×)**: `always_K2` 또는 `gate_ent_f0.5_K4` — small but consistent +1-1.4pp lift
+- **Tier B (medium, 4-5×)**: `always_K4` 또는 `gate_combined_f0.5_K4` — solid +2pp lift
+- **Tier C (expensive, 7-9×)**: `gate_combined_f0.5_K8` 또는 `always_K8` — max +2.2pp lift
+- **AIME-specific**: K=8 필수, gate_combined가 best
+
 ---
 
 ## 13. Updated paper narrative (현재 시점 — 2 layer 구조)

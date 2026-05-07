@@ -1,0 +1,219 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "tag": "qwen25_7b",
+  "dataset": "math500",
+  "n": 200,
+  "vanilla_acc": 0.745,
+  "results": {
+    "gate_ent_f0.25_K2": {
+      "acc": 0.755,
+      "delta": 0.010000000000000009,
+      "n": 200,
+      "flagged_n": 50,
+      "avg_compute": 1.5
+    },
+    "gate_ent_f0.25_K4": {
+      "acc": 0.75,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 50,
+      "avg_compute": 2.0
+    },
+    "gate_ent_f0.25_K8": {
+      "acc": 0.76,
+      "delta": 0.015000000000000013,
+      "n": 200,
+      "flagged_n": 50,
+      "avg_compute": 3.0
+    },
+    "gate_ent_f0.5_K2": {
+      "acc": 0.755,
+      "delta": 0.010000000000000009,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 2.0
+    },
+    "gate_ent_f0.5_K4": {
+      "acc": 0.77,
+      "delta": 0.025000000000000022,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_ent_f0.5_K8": {
+      "acc": 0.77,
+      "delta": 0.025000000000000022,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 5.0
+    },
+    "gate_ent_f0.75_K2": {
+      "acc": 0.75,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 150,
+      "avg_compute": 2.5
+    },
+    "gate_ent_f0.75_K4": {
+      "acc": 0.745,
+      "delta": 0.0,
+      "n": 200,
+      "flagged_n": 150,
+      "avg_compute": 4.0
+    },
+    "gate_ent_f0.75_K8": {
+      "acc": 0.775,
+      "delta": 0.030000000000000027,
+      "n": 200,
+      "flagged_n": 150,
+      "avg_compute": 7.0
+    },
+    "gate_lp_f0.25_K2": {
+      "acc": 0.74,
+      "delta": -0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 50,
+      "avg_compute": 1.5
+    },
+    "gate_lp_f0.25_K4": {
+      "acc": 0.74,
+      "delta": -0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 50,
+      "avg_compute": 2.0
+    },
+    "gate_lp_f0.25_K8": {
+      "acc": 0.74,
+      "delta": -0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 50,
+      "avg_compute": 3.0
+    },
+    "gate_lp_f0.5_K2": {
+      "acc": 0.75,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 2.0
+    },
+    "gate_lp_f0.5_K4": {
+      "acc": 0.755,
+      "delta": 0.010000000000000009,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_lp_f0.5_K8": {
+      "acc": 0.765,
+      "delta": 0.020000000000000018,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 5.0
+    },
+    "gate_lp_f0.75_K2": {
+      "acc": 0.75,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 150,
+      "avg_compute": 2.5
+    },
+    "gate_lp_f0.75_K4": {
+      "acc": 0.76,
+      "delta": 0.015000000000000013,
+      "n": 200,
+      "flagged_n": 150,
+      "avg_compute": 4.0
+    },
+    "gate_lp_f0.75_K8": {
+      "acc": 0.765,
+      "delta": 0.020000000000000018,
+      "n": 200,
+      "flagged_n": 150,
+      "avg_compute": 7.0
+    },
+    "gate_combined_f0.25_K2": {
+      "acc": 0.74,
+      "delta": -0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 142,
+      "avg_compute": 2.42
+    },
+    "gate_combined_f0.25_K4": {
+      "acc": 0.73,
+      "delta": -0.015000000000000013,
+      "n": 200,
+      "flagged_n": 142,
+      "avg_compute": 3.84
+    },
+    "gate_combined_f0.25_K8": {
+      "acc": 0.745,
+      "delta": 0.0,
+      "n": 200,
+      "flagged_n": 142,
+      "avg_compute": 6.68
+    },
+    "gate_combined_f0.5_K2": {
+      "acc": 0.75,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 168,
+      "avg_compute": 2.6799999999999997
+    },
+    "gate_combined_f0.5_K4": {
+      "acc": 0.76,
+      "delta": 0.015000000000000013,
+      "n": 200,
+      "flagged_n": 168,
+      "avg_compute": 4.359999999999999
+    },
+    "gate_combined_f0.5_K8": {
+      "acc": 0.755,
+      "delta": 0.010000000000000009,
+      "n": 200,
+      "flagged_n": 168,
+      "avg_compute": 7.72
+    },
+    "gate_combined_f0.75_K2": {
+      "acc": 0.75,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 190,
+      "avg_compute": 2.9
+    },
+    "gate_combined_f0.75_K4": {
+      "acc": 0.765,
+      "delta": 0.020000000000000018,
+      "n": 200,
+      "flagged_n": 190,
+      "avg_compute": 4.8
+    },
+    "gate_combined_f0.75_K8": {
+      "acc": 0.76,
+      "delta": 0.015000000000000013,
+      "n": 200,
+      "flagged_n": 190,
+      "avg_compute": 8.6
+    },
+    "always_K2": {
+      "acc": 0.75,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "flagged_n": 200,
+      "avg_compute": 3.0
+    },
+    "always_K4": {
+      "acc": 0.785,
+      "delta": 0.040000000000000036,
+      "n": 200,
+      "flagged_n": 200,
+      "avg_compute": 5.0
+    },
+    "always_K8": {
+      "acc": 0.755,
+      "delta": 0.010000000000000009,
+      "n": 200,
+      "flagged_n": 200,
+      "avg_compute": 9.0
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "tag": "qwen25_math_7b",
+  "dataset": "aime",
+  "n": 200,
+  "vanilla_acc": 0.39,
+  "gate_frac": 0.5,
+  "results": {
+    "gate_ent_K4": {
+      "acc": 0.41,
+      "delta": 0.019999999999999962,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_lp_K4": {
+      "acc": 0.39,
+      "delta": 0.0,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 3.0
+    },
+    "gate_ent_K8": {
+      "acc": 0.42,
+      "delta": 0.02999999999999997,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 5.0
+    },
+    "gate_lp_K8": {
+      "acc": 0.405,
+      "delta": 0.015000000000000013,
+      "n": 200,
+      "flagged_n": 100,
+      "avg_compute": 5.0
+    },
+    "always_K4": {
+      "acc": 0.41,
+      "delta": 0.019999999999999962,
+      "n": 200,
+      "flagged_n": 200,
+      "avg_compute": 5.0
+    }
+  }
+}

@@ -423,6 +423,31 @@ Holm sequential, e-process 등은 future work. 현재 A vs B로 선명한 trade-
 
 **Paper에 critical finding**: re-roll을 항상 하지 말고 **entropy_mean으로 confidence 낮은 trace에만** 적용하면 비용 절약 + 가끔 정확도까지 개선.
 
+### Tier 5_v2 검증 — 4 models × 3 datasets (12 cells), gate variants + K=8
+
+5 strategies × 12 cells:
+
+| Method | Avg Δ | Cost | Cost-eff (Δ/cost) |
+|---|---|---|---|
+| **`always_K4`** | **+1.71pp** | 5.0× | 0.34 pp/× |
+| `gate_lp_K8` | +1.29pp | 5.0× | 0.26 pp/× |
+| **`gate_ent_K4`** | **+1.12pp** | **3.0×** | **0.37 pp/×** ⭐ |
+| `gate_ent_K8` | +1.08pp | 5.0× | 0.22 pp/× |
+| `gate_lp_K4` | +0.92pp | 3.0× | 0.31 pp/× |
+
+**Per-cell winners (12 cells):**
+- `always_K4`: 4 wins (math500/olympiad on Phi-4, AIME on 32b/7b)
+- `gate_ent_K8`: 3 wins (math500 7B/Math-7B/32B)
+- `gate_ent_K4`: 3 wins (3 olympiad cells with 60% cost)
+- `gate_lp_K8`: 1 win (Phi-4 AIME)
+- `gate_lp_K4`: 0 wins
+
+**Final paper recommendation:**
+1. **Maximum accuracy**: `always_K4` at 5× cost (+1.71pp avg)
+2. **Best cost-accuracy tradeoff**: `gate_ent_K4` at 3× cost (+1.12pp avg, 0.37 pp/× — most efficient)
+3. **Hard problems (AIME)**: `gate_ent_K8` or `always_K4` at 5× cost
+4. **Olympiad**: `gate_ent_K4` (cheap, effective)
+
 ---
 
 ## 13. Updated paper narrative (현재 시점 — 2 layer 구조)

@@ -346,18 +346,44 @@ Holm sequential, e-process 등은 future work. 현재 A vs B로 선명한 trade-
 
 **Tier 1 결론**: K=4 majority (Pilot C 기존 baseline)이 모든 cell에서 1등. Single-alt methods (insertion, excise, backtrack)는 flat 또는 약간 negative. Trigger은 lp_min worst step.
 
-### Tier 2 검증 (실험 진행 중) — 6+ methods × 12 cells
-- K4_lp_select (vs majority): K=4 alts에서 highest mean lp 선택
-- K2_K4_escalation: K=2 T=0.5 → 동의 시 accept, 불동의 시 K=4 T=1.0
-- K4_T1: 같은 K=4 majority지만 T=1.0 (높은 다양성)
-- K8_majority: 컴퓨트 스케일링 비교
-- K4_majority_entropy_trigger: 다른 trigger
-- multi_worst_K2: TOP-2 worst step에서 각 K=2
+### Tier 2 검증 결과 — 7 methods × 11 cells
 
-### Tier 3 검증 (실험 진행 중) — Online multi-step
-- online_K1_top3_worst: TOP-3 worst step에서 K=1씩 regen + 모두 vote
-- online_K2_BoN_top3_worst: TOP-3 worst step에서 K=2 + lp-select
-- prov_anchor_K2: provisional answer hint를 cue로 K=2 regen
+| Cell | vanilla | best method | acc | Δ |
+|---|---|---|---|---|
+| **32B AIME** | 0.395 | **K4_majority** | **0.460** | **+6.5** ⭐ |
+| 7B AIME | 0.270 | K4_majority | 0.330 | +6.0 |
+| Phi-4 AIME | 0.345 | K8_majority | 0.400 | +5.5 |
+| Phi-4 olympiad | 0.485 | K8_majority | 0.515 | +3.0 |
+| 7B math500 | 0.745 | K4_majority | 0.770 | +2.5 |
+| 32B math500 | 0.805 | K2_K4_escalation | 0.820 | +1.5 |
+| Math-7B AIME | 0.390 | K4_majority | 0.410 | +2.0 |
+| Math-7B olympiad | 0.450 | K8_majority | 0.470 | +2.0 |
+| 7B olympiad | 0.445 | K4_majority | 0.460 | +1.5 |
+| Phi-4 math500 | 0.775 | K4_majority | 0.790 | +1.5 |
+| Math-7B math500 | 0.800 | K4_majority | 0.810 | +1.0 |
+
+**Tier 2 패턴:**
+- **K4_majority가 여전히 dominant** (5/11 1등)
+- **K8_majority** 어려운 dataset에서 (3/11) — compute scaling 효과
+- **K2_K4_escalation** 강한 모델 + 쉬운 dataset에서 (1/11)
+- **K4_lp_select 항상 negative** — picking by lp가 majority보다 나쁨
+- **multi_worst_K2** top-2 worst에서 각 K=2: 거의 K=4와 동급
+
+### Tier 3 검증 결과 — Online multi-step (7Bs only)
+
+| Cell | vanilla | best T3 method | acc | Δ |
+|---|---|---|---|---|
+| 7B AIME | 0.270 | online_K1_top3_worst | 0.310 | +4.0 |
+| 7B math500 | 0.745 | (K4_baseline) | 0.770 | +2.5 |
+| 7B olympiad | 0.445 | (K4_baseline / prov_anchor_K2) | 0.455 | +1.0 |
+| Math-7B math500 | 0.800 | online_K1_top3_worst | 0.805 | +0.5 |
+| Math-7B olympiad | 0.450 | online_K1_top3 / prov_anchor | 0.455 | +0.5 |
+| Math-7B AIME | 0.390 | (K4_baseline) | 0.410 | +2.0 |
+
+**Tier 3 패턴:**
+- Online multi-step (TOP-3 worst step regen)이 K=4 single-shot과 competitive하지만 dominant 아님
+- prov_anchor_K2 (provisional answer hint)는 약함 — 힌트가 diversity 줄이거나 greedy와 일치
+- 어려운 cell (AIME)에서 multi-step이 single-K4와 비슷한 lift
 
 ---
 

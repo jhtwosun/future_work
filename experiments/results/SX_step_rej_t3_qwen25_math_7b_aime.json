@@ -1,0 +1,31 @@
+{
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "tag": "qwen25_math_7b",
+  "dataset": "aime",
+  "n": 200,
+  "vanilla_acc": 0.39,
+  "threshold": -6.2354748249053955,
+  "results": {
+    "online_K1_top3_worst": {
+      "acc": 0.39,
+      "delta": 0.0,
+      "n": 200,
+      "avg_alts": 0.085
+    },
+    "online_K2_BoN_top3_worst": {
+      "acc": 0.39,
+      "delta": 0.0,
+      "n": 200
+    },
+    "K4_majority_baseline": {
+      "acc": 0.41,
+      "delta": 0.019999999999999962,
+      "n": 200
+    },
+    "prov_anchor_K2": {
+      "acc": 0.39,
+      "delta": 0.0,
+      "n": 200
+    }
+  }
+}

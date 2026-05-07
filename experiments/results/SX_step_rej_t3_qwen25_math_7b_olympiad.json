@@ -1,0 +1,31 @@
+{
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "tag": "qwen25_math_7b",
+  "dataset": "olympiad",
+  "n": 200,
+  "vanilla_acc": 0.45,
+  "threshold": -0.15800501622035795,
+  "results": {
+    "online_K1_top3_worst": {
+      "acc": 0.455,
+      "delta": 0.0050000000000000044,
+      "n": 200,
+      "avg_alts": 0.985
+    },
+    "online_K2_BoN_top3_worst": {
+      "acc": 0.455,
+      "delta": 0.0050000000000000044,
+      "n": 200
+    },
+    "K4_majority_baseline": {
+      "acc": 0.43,
+      "delta": -0.020000000000000018,
+      "n": 200
+    },
+    "prov_anchor_K2": {
+      "acc": 0.455,
+      "delta": 0.0050000000000000044,
+      "n": 200
+    }
+  }
+}

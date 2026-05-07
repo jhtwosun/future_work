@@ -474,6 +474,13 @@ Pilot E SC@8 (1600 generations) was started and killed after ~25 of 1600 — it 
 | MATH-500 · vanilla + PRM worst-step branch (Pilot K) | 52.0% | 100% (cost: 5× compute, no gain) |
 | AIME OOD · weighted CP + lp_min α=0.50 (Pilot F) | 15% | 47% answered, cov=0.50 (target) |
 | MATH-500 (R1, K=2 group) · CP + lp_min α=0.50 (Pilot H) | 71.8% | 41% answered |
+| MATH-500 · DeepSeek-R1-Distill + CP + PRM-mean α=0.50 (Pilot O) | **77.0%** | 37% answered (cross-model PRM, +18pt) |
+| MATH-500 · DeepSeek-R1-Distill + CP + PRM-min α=0.30 (Pilot O) | 74.6% | 55% answered |
+| MATH-500 · R1-Distill SC@4 majority (Pilot G2) | 63.0% | 100% answered |
+| AIME-1983-2024 (n=300) · CP + sc_top1 α=0.10 (Pilot I) | **71.2%** | 24% answered (vs 23.3% vanilla = +48pt) |
+| AIME-1983-2024 (n=300) · CP + sc_top1 α=0.30 (Pilot I) | **91.7%** | 12% answered |
+| AIME-1983-2024 (n=300) · CP + sc_top1 α=0.50 (Pilot I) | **100%** | 6% answered (cov over-conservative 0.27) |
+| MATH-500 · vanilla + rewrite-cue branch K=4 (Pilot L) | 54.0% | 100% (recov 4 / lost 2, net wash) |
 
 Empirical in-distribution coverage matched target $1-\alpha$ within ±1% across all rows. **OOD coverage (Pilot B) breaks**, by design as motivation for weighted-CP / per-domain calibration.
 
@@ -492,13 +499,132 @@ MATH-500 (Qwen2.5-7B-Instruct) selective accuracy at α=0.5:
 
 PRM gives roughly two-thirds of the SC@8 gain at one-quarter the compute (1× generator + 1× PRM forward = 2× total). For the actual paper this is a strong middle column — particularly because it is *training-free* (uses an existing open PRM) and gives a deterministic single forward pass per trace, unlike SC which needs N stochastic samples.
 
-## 9. Bottom line as of overnight 2026-05-06
+## 9. Fourth pass — Pilots N, M, I, L, O, G2 (2026-05-06)
 
-Three pieces are in place for a paper:
-1. **Trajectory-level CP machinery is sound** (Pilot 8 / 10 / J): in-distribution coverage matches target $(1-\alpha)$ within bootstrap CIs, across four score families.
-2. **The score-family Pareto is now complete** (Pilots 10 + A): lp_min (free) → PRM-min (2× cost) → SC-top1 (8× cost), each step adding ~+9 pp of selective accuracy at α=0.5.
-3. **The OOD failure mode is real and partially fixable** (Pilots B + F): vanilla CP breaks under MATH-500 → AIME-2024, weighted CP recovers high-α coverage but with very wide CIs at n=30.
+The previous "next-pilot list" had open A2/F/G/H/I/J/L/M/N items. After the third pass closed A/F/H/J/K, the fourth pass closed the remaining N, M, I, L, O, G2.
 
-Two pieces are *not* in place and need follow-up work:
-1. **Step-level branching** as a contribution is essentially refuted by the current intervention (re-roll K alternatives). Either a smarter intervention (Pilot L / explicit rewrite prompting) or the trajectory-level framing must replace it in the paper.
-2. **AIME is too small** for OOD CIs. Need GPQA-Diamond (198 problems) or AIME-1983-2024 expansion before the OOD claims are publishable.
+### Pilot N — Pareto figure with PRM curve
+
+Re-rendered `pilotN_pareto_with_prm.png` overlaying lp_min, lp_mean, prm_min, prm_mean, and sc_top1 on the MATH-500 selective-accuracy plane. PRM-min sits visibly between lp_min and sc_top1 across all α — confirming the 1× / 2× / 8× compute ladder graphically.
+
+### Pilot M — PRM + SC ensemble
+
+Built five ensemble scores from `prm_min` and `sc_top1`: rank-mean, rank-max, rank-min, z-sum, product. Spearman ρ vs SC majority correctness on the 200-question intersection:
+
+| Score | ρ | CP@α=0.5 kept_acc | keep% |
+|---|---|---|---|
+| **sc_top1**          | **0.503** | 0.794 | 45% |
+| ens_z_sum            | 0.473 | 0.791 | 35% |
+| ens_rank_mean        | 0.455 | 0.778 | 36% |
+| ens_product          | 0.447 | 0.794 | 35% |
+| ens_rank_max         | 0.434 | 0.765 | 48% |
+| ens_rank_min         | 0.431 | 0.788 | 36% |
+| prm_min              | 0.331 | 0.692 | 42% |
+| prm_mean             | 0.287 | 0.684 | 41% |
+
+→ **Pure SC top-1 already dominates among single-model conformity scores.** Ensembles match SC on kept_acc but at a slightly lower keep rate (35% vs 45%) — i.e. they are slightly more selective at the same accuracy. The 200-question subset bootstrap CIs would tighten this, but the qualitative conclusion is: *adding PRM signal on top of SC@8 buys little*. (Adding SC on top of a PRM-only baseline does buy something, however — see prm_min row.)
+
+### Pilot I — AIME 1983-2024 (n=300) replaces under-powered Pilot B
+
+Switched the OOD test from the AIME-2024 30-problem set to a 300-problem random sample from AIME 1983-2024.
+
+| metric | value |
+|---|---|
+| AIME-extended greedy        | **20.3 %** (61/300) |
+| AIME-extended SC@8 majority | **23.3 %** (70/300) |
+| AIME-extended SC any-correct | 39.3 % |
+| Mean SC top-1 fraction | 0.397 |
+
+Bootstrap-CI OOD coverage (calibrated on MATH-500 lp_*, evaluated on AIME-extended):
+
+| Score | α | Target | Vanilla cov [95% CI] | Weighted cov [95% CI] |
+|---|---|---|---|---|
+| lp_mean | 0.05 | 0.95 | 1.000 [1.0, 1.0] | 1.000 [1.0, 1.0] |
+| lp_mean | 0.20 | 0.80 | 0.934 [0.863, 0.985] | 0.967 [0.912, 1.000] |
+| lp_median | 0.30 | 0.70 | 0.869 [0.775, 0.953] | 0.885 [0.797, 0.961] |
+| lp_median | 0.50 | 0.50 | 0.738 [0.617, 0.849] | 0.754 [0.635, 0.863] |
+
+For the SC top-1 score, OOD coverage flips direction (under-conservative):
+
+| α | Target | Vanilla cov [95% CI] | Kept acc | Keep% |
+|---|---|---|---|---|
+| 0.05 | 0.95 | 0.914 [0.846, 0.971] | 44.1 % | 48 % |
+| 0.10 | 0.90 | 0.743 [0.640, 0.843] | **71.2 %** | 24 % |
+| 0.20 | 0.80 | 0.557 [0.441, 0.672] | **81.2 %** | 16 % |
+| 0.30 | 0.70 | 0.471 [0.355, 0.589] | **91.7 %** | 12 % |
+| 0.50 | 0.50 | 0.271 [0.171, 0.373] | **100.0 %** | 6 % |
+
+**Two key findings**:
+1. **OOD failure direction is score-dependent**: lp_* is over-conservative on AIME (coverage 1.0 at α=0.05), sc_top1 is under-conservative (coverage 0.27 at α=0.5). These are *different* failure modes that need different fixes — paper should discuss both.
+2. **Even with broken coverage, the selective accuracy on AIME via SC + CP is dramatic**: 23 % vanilla → 71 % at 24 % answer rate (+48 pp), 92 % at 12 % (+69 pp). The headline operating point on AIME is "answer 1 in 8 questions, almost always correct."
+
+### Pilot L — Rewrite-cue step branching
+
+Compared K=4 worst-step branching with vs without an explicit reconsideration cue ("Hmm, wait. Let me reconsider this step — I might have made an error. Let me try a different approach.").
+
+| Policy | Accuracy | Recovered / lost |
+|---|---|---|
+| Vanilla greedy | 52.0 % | — |
+| Always branch with cue | 54.0 % | 4 / 2 |
+| Always branch no cue (Pilot C replication) | 55.0 % | 3 / 0 |
+| CP-triggered branch with cue | 53.0 % | 2 / 1 |
+| CP-triggered branch no cue | 54.0 % | (matches above) |
+
+The cue **does increase the recovery count** (4 vs 3) but also the loss count (2 vs 0). Net effect is a wash. **Pilot K's null result is not fixed by adding a reconsideration cue** — the rewrite prompt makes the model more likely to deviate but also more likely to deviate into a wrong answer. Confirms that the bottleneck of step-level branching is not the score nor the cue style, but the *intervention class itself* (sample K alternatives at a higher temperature).
+
+### Pilot O — Cross-model PRM scoring on R1-Distill traces
+
+Applied Qwen2.5-Math-PRM-7B to the 200 DeepSeek-R1-Distill-Qwen-7B greedy MATH-500 traces (57 truncated to 80 steps to fit PRM context). Vanilla R1 accuracy 0.59.
+
+| Score | α | Coverage | Kept acc | Keep% | Δ vs vanilla 0.59 |
+|---|---|---|---|---|---|
+| **prm_mean** | 0.50 | 0.485 | **0.770** | 37 % | **+18.0 pp** |
+| prm_min | 0.50 | 0.487 | 0.761 | 38 % | +17.1 pp |
+| prm_min | 0.30 | 0.692 | 0.746 | 55 % | +15.6 pp |
+| prm_mean | 0.30 | 0.687 | 0.724 | 56 % | +13.4 pp |
+| Spearman ρ(prm_mean) | — | — | **0.351** | — | (vs lp_mean ρ=0.204 in Pilot E) |
+
+→ **The PRM trained on Qwen2.5-Math outputs generalizes to R1-Distill traces.** The selective-accuracy lift on R1-Distill (+18 pp) is comparable in magnitude to the lift on the original Qwen2.5-7B (+19 pp), even though the generator is different and the trace structure is much longer (60 steps vs 8). prm_last is highly quantized (mostly 0 or 1) and gets stuck at cov=0.93 — useful only at low α.
+
+### Pilot G2 — R1-Distill SC@4 on MATH-500 (n=100)
+
+The full Pilot E SC@8 was killed for time on the second pass. This re-runs at smaller scale to fill the row.
+
+| metric | value |
+|---|---|
+| Majority accuracy (N=4) | **0.630** (greedy 0.59 → +4.0 pp) |
+| Oracle any-correct       | 0.660 |
+| Mean SC top-1 fraction   | **0.855** (vs Qwen2.5 0.764) |
+| Wallclock                | 97 s for 100 q × 4 |
+
+R1-Distill is *more* consistent across stochastic samples than Qwen2.5-7B — its SC top-1 fraction averages 0.86 (vs 0.76 for Qwen2.5). The discrete N=4 score has only 4 levels (1/4, 2/4, 3/4, 4/4), so quantization in CP cutoffs is severe and CP gains over vanilla SC are limited. The right SC budget for R1-Distill seems to be N≥8.
+
+---
+
+## 10. Final score-family ladder (MATH-500, Qwen2.5-7B-Instruct, α=0.5)
+
+| Score | Compute | Kept acc | vs vanilla 0.516 |
+|---|---|---|---|
+| greedy (no CP)     | 1× | 0.516 | — |
+| lp_min             | 1× | 0.620 | +10.4 pp |
+| **prm_min** (Qwen2.5-Math-PRM-7B) | **2×** | **0.707** | **+19.1 pp** |
+| sc_top1 (SC @ N=8) | 8× | 0.793 | +27.7 pp |
+| sc_top1 (SC @ N=16) | 16× | 0.841 | +32.5 pp |
+| sc_top1 (SC @ N=32) | 32× | 0.835 | +31.9 pp (saturates) |
+| ens_z_sum (PRM + SC@8) | 10× | 0.791 | +27.5 pp (≈ SC alone) |
+
+---
+
+## 11. Bottom line as of 2026-05-06 (after fourth pass)
+
+**Four pieces are now in place** for a paper:
+1. **Trajectory-level CP machinery is sound** — in-distribution coverage matches target across 5 score families × 2 datasets × 5 α levels × 200 seeds × 500 bootstrap.
+2. **Score-family Pareto is complete** — lp_min (1×) → PRM-min (2×) → SC-top1 (8×). PRM-min is the single largest novel finding from this run.
+3. **OOD failure is real, score-dependent, and partially fixable** — lp_* over-conservative, sc_top1 under-conservative on AIME-extended (n=300). Weighted CP corrects high-α breakage on lp_*; under-coverage on sc_top1 still open.
+4. **Cross-generator PRM transfer works** — Qwen2.5-Math-PRM-7B applied to R1-Distill traces gives +18 pp at α=0.5, matching the +19 pp on its native Qwen2.5 generator. PRM as a score family is *generator-agnostic*.
+
+**Two pieces remain open** for follow-up:
+1. **Step-level branching as a publishable contribution is essentially closed** — Pilots C, K, L all show that `worst_step + K-resample` gives at best +1–2 pp on average and frequently 0. Requires either a fundamentally different intervention (token-level edit, search expansion, structured rewrite) or to be dropped from the paper in favor of trajectory-level framing.
+2. **The OOD coverage gap has not been fully closed** — weighted CP fixes low-α / lp_*. Sc_top1 OOD under-coverage remains. May need conditional CP, group-conditional coverage, or per-domain calibration.
+
+**Recommended paper framing**: position CoT-CP as ***the trajectory-level coverage layer*** that turns lp / PRM / SC scores into calibrated selective predictors, with PRM as the new mid-cost operating point. Frame step-branching as an explored-and-rejected alternative; frame OOD weighted CP as a robustness extension. The headline figure becomes a single Pareto plot showing all three score families, with vanilla / SC@N saturation curve and CP+score curves clearly separated.

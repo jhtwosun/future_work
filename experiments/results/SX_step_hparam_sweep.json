@@ -1,0 +1,336 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n": 200,
+  "results": {
+    "greedy": {
+      "acc": 0.745
+    },
+    "pilotC_lp_min_K2_T0.5": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 3,
+      "lost": 1,
+      "wallclock_sec": 12.995036125183105
+    },
+    "pilotC_lp_min_K2_T0.7": {
+      "acc": 0.75,
+      "n": 200,
+      "recov": 2,
+      "lost": 1,
+      "wallclock_sec": 12.853069305419922
+    },
+    "pilotC_lp_min_K2_T1.0": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 4,
+      "lost": 2,
+      "wallclock_sec": 12.861141443252563
+    },
+    "pilotC_lp_min_K4_T0.5": {
+      "acc": 0.765,
+      "n": 200,
+      "recov": 7,
+      "lost": 3,
+      "wallclock_sec": 20.634288787841797
+    },
+    "pilotC_lp_min_K4_T0.7": {
+      "acc": 0.79,
+      "n": 200,
+      "recov": 10,
+      "lost": 1,
+      "wallclock_sec": 21.00723433494568
+    },
+    "pilotC_lp_min_K4_T1.0": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 4,
+      "lost": 2,
+      "wallclock_sec": 20.74453902244568
+    },
+    "pilotC_lp_min_K8_T0.5": {
+      "acc": 0.78,
+      "n": 200,
+      "recov": 9,
+      "lost": 2,
+      "wallclock_sec": 41.887696504592896
+    },
+    "pilotC_lp_min_K8_T0.7": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 8,
+      "lost": 6,
+      "wallclock_sec": 39.311588764190674
+    },
+    "pilotC_lp_min_K8_T1.0": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 7,
+      "lost": 5,
+      "wallclock_sec": 41.70920777320862
+    },
+    "pilotC_lp_p25_K2_T0.5": {
+      "acc": 0.76,
+      "n": 200,
+      "recov": 6,
+      "lost": 3,
+      "wallclock_sec": 12.738178491592407
+    },
+    "pilotC_lp_p25_K2_T0.7": {
+      "acc": 0.73,
+      "n": 200,
+      "recov": 3,
+      "lost": 6,
+      "wallclock_sec": 12.25773549079895
+    },
+    "pilotC_lp_p25_K2_T1.0": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 4,
+      "lost": 2,
+      "wallclock_sec": 12.490242004394531
+    },
+    "pilotC_lp_p25_K4_T0.5": {
+      "acc": 0.74,
+      "n": 200,
+      "recov": 3,
+      "lost": 4,
+      "wallclock_sec": 19.313099145889282
+    },
+    "pilotC_lp_p25_K4_T0.7": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 7,
+      "lost": 5,
+      "wallclock_sec": 19.40749764442444
+    },
+    "pilotC_lp_p25_K4_T1.0": {
+      "acc": 0.745,
+      "n": 200,
+      "recov": 5,
+      "lost": 5,
+      "wallclock_sec": 19.603455066680908
+    },
+    "pilotC_lp_p25_K8_T0.5": {
+      "acc": 0.765,
+      "n": 200,
+      "recov": 7,
+      "lost": 3,
+      "wallclock_sec": 38.78718638420105
+    },
+    "pilotC_lp_p25_K8_T0.7": {
+      "acc": 0.765,
+      "n": 200,
+      "recov": 9,
+      "lost": 5,
+      "wallclock_sec": 38.12977695465088
+    },
+    "pilotC_lp_p25_K8_T1.0": {
+      "acc": 0.765,
+      "n": 200,
+      "recov": 9,
+      "lost": 5,
+      "wallclock_sec": 38.337751150131226
+    },
+    "pilotC_first_K2_T0.5": {
+      "acc": 0.735,
+      "n": 200,
+      "recov": 4,
+      "lost": 6,
+      "wallclock_sec": 15.046054124832153
+    },
+    "pilotC_first_K2_T0.7": {
+      "acc": 0.745,
+      "n": 200,
+      "recov": 3,
+      "lost": 3,
+      "wallclock_sec": 14.994185447692871
+    },
+    "pilotC_first_K2_T1.0": {
+      "acc": 0.76,
+      "n": 200,
+      "recov": 5,
+      "lost": 2,
+      "wallclock_sec": 14.909779787063599
+    },
+    "pilotC_first_K4_T0.5": {
+      "acc": 0.76,
+      "n": 200,
+      "recov": 7,
+      "lost": 4,
+      "wallclock_sec": 25.3907368183136
+    },
+    "pilotC_first_K4_T0.7": {
+      "acc": 0.765,
+      "n": 200,
+      "recov": 8,
+      "lost": 4,
+      "wallclock_sec": 25.520561456680298
+    },
+    "pilotC_first_K4_T1.0": {
+      "acc": 0.76,
+      "n": 200,
+      "recov": 8,
+      "lost": 5,
+      "wallclock_sec": 25.60437536239624
+    },
+    "pilotC_first_K8_T0.5": {
+      "acc": 0.775,
+      "n": 200,
+      "recov": 11,
+      "lost": 5,
+      "wallclock_sec": 54.66931748390198
+    },
+    "pilotC_first_K8_T0.7": {
+      "acc": 0.775,
+      "n": 200,
+      "recov": 12,
+      "lost": 6,
+      "wallclock_sec": 50.874120473861694
+    },
+    "pilotC_first_K8_T1.0": {
+      "acc": 0.765,
+      "n": 200,
+      "recov": 11,
+      "lost": 7,
+      "wallclock_sec": 51.662559509277344
+    },
+    "pilotC_last_K2_T0.5": {
+      "acc": 0.745,
+      "n": 200,
+      "recov": 0,
+      "lost": 0,
+      "wallclock_sec": 10.155020236968994
+    },
+    "pilotC_last_K2_T0.7": {
+      "acc": 0.74,
+      "n": 200,
+      "recov": 0,
+      "lost": 1,
+      "wallclock_sec": 7.488140821456909
+    },
+    "pilotC_last_K2_T1.0": {
+      "acc": 0.75,
+      "n": 200,
+      "recov": 1,
+      "lost": 0,
+      "wallclock_sec": 7.428570032119751
+    },
+    "pilotC_last_K4_T0.5": {
+      "acc": 0.74,
+      "n": 200,
+      "recov": 0,
+      "lost": 1,
+      "wallclock_sec": 8.696820497512817
+    },
+    "pilotC_last_K4_T0.7": {
+      "acc": 0.75,
+      "n": 200,
+      "recov": 2,
+      "lost": 1,
+      "wallclock_sec": 8.694711923599243
+    },
+    "pilotC_last_K4_T1.0": {
+      "acc": 0.745,
+      "n": 200,
+      "recov": 1,
+      "lost": 1,
+      "wallclock_sec": 8.66465950012207
+    },
+    "pilotC_last_K8_T0.5": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 2,
+      "lost": 0,
+      "wallclock_sec": 11.947047233581543
+    },
+    "pilotC_last_K8_T0.7": {
+      "acc": 0.75,
+      "n": 200,
+      "recov": 2,
+      "lost": 1,
+      "wallclock_sec": 11.707165241241455
+    },
+    "pilotC_last_K8_T1.0": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 3,
+      "lost": 1,
+      "wallclock_sec": 11.94518232345581
+    },
+    "pilotC_middle_K2_T0.5": {
+      "acc": 0.775,
+      "n": 200,
+      "recov": 8,
+      "lost": 2,
+      "wallclock_sec": 11.691022634506226
+    },
+    "pilotC_middle_K2_T0.7": {
+      "acc": 0.76,
+      "n": 200,
+      "recov": 5,
+      "lost": 2,
+      "wallclock_sec": 11.65954065322876
+    },
+    "pilotC_middle_K2_T1.0": {
+      "acc": 0.765,
+      "n": 200,
+      "recov": 5,
+      "lost": 1,
+      "wallclock_sec": 11.808196306228638
+    },
+    "pilotC_middle_K4_T0.5": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 6,
+      "lost": 4,
+      "wallclock_sec": 17.784618139266968
+    },
+    "pilotC_middle_K4_T0.7": {
+      "acc": 0.77,
+      "n": 200,
+      "recov": 6,
+      "lost": 1,
+      "wallclock_sec": 17.92865562438965
+    },
+    "pilotC_middle_K4_T1.0": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 5,
+      "lost": 3,
+      "wallclock_sec": 18.172590732574463
+    },
+    "pilotC_middle_K8_T0.5": {
+      "acc": 0.755,
+      "n": 200,
+      "recov": 6,
+      "lost": 4,
+      "wallclock_sec": 35.735987186431885
+    },
+    "pilotC_middle_K8_T0.7": {
+      "acc": 0.775,
+      "n": 200,
+      "recov": 10,
+      "lost": 4,
+      "wallclock_sec": 33.92857074737549
+    },
+    "pilotC_middle_K8_T1.0": {
+      "acc": 0.76,
+      "n": 200,
+      "recov": 9,
+      "lost": 6,
+      "wallclock_sec": 35.54471969604492
+    },
+    "sc_K2_T0.7": {
+      "acc": 0.73,
+      "wallclock_sec": 18.5632107257843
+    },
+    "sc_K4_T0.7": {
+      "acc": 0.735,
+      "wallclock_sec": 29.334519624710083
+    },
+    "sc_K8_T0.7": {
+      "acc": 0.76,
+      "wallclock_sec": 57.85491371154785
+    }
+  }
+}

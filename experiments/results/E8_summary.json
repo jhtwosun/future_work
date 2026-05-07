@@ -1,0 +1,17 @@
+{
+  "model": "microsoft/phi-4",
+  "n": 500,
+  "dataset": "MATH-500",
+  "greedy": {
+    "accuracy": 0.426,
+    "parse_failures": 0,
+    "wallclock_sec": 49.91158747673035
+  },
+  "sc": {
+    "n_samples": 8,
+    "majority_accuracy": 0.45,
+    "oracle_any": 0.55,
+    "mean_top1_frac": 0.75875,
+    "wallclock_sec": 384.8706703186035
+  }
+}

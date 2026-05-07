@@ -1,0 +1,20 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "alpha": 0.3,
+  "q_hat_lp_min": -0.22420448379234056,
+  "n_test": 100,
+  "K_branch": 4,
+  "vanilla_acc": 0.52,
+  "always_branch_with_cue": 0.54,
+  "always_branch_no_cue": 0.55,
+  "cp_branch_with_cue": 0.53,
+  "cp_branch_no_cue": 0.54,
+  "recovered_with_cue": 4,
+  "lost_with_cue": 2,
+  "recovered_no_cue": 3,
+  "lost_no_cue": 0,
+  "cp_recovered_with_cue": 2,
+  "cp_lost_with_cue": 1,
+  "n_cp_triggered": 32,
+  "branch_wallclock_sec": 25.949531078338623
+}

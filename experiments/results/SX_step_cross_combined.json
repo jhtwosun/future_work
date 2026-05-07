@@ -1,0 +1,38 @@
+[
+  {
+    "name": "MATH-500-200",
+    "n": 200,
+    "greedy_acc": 0.745,
+    "pilotC_lp_min_K4_T0.7_acc": 0.76,
+    "para_M3_modal_acc": 0.77,
+    "combined_para_pilotC_acc": 0.77,
+    "n_branched_in_combined": 43
+  },
+  {
+    "name": "AIME-200",
+    "n": 200,
+    "greedy_acc": 0.22,
+    "pilotC_lp_min_K4_T0.7_acc": 0.25,
+    "para_M3_modal_acc": 0.255,
+    "combined_para_pilotC_acc": 0.26,
+    "n_branched_in_combined": 134
+  },
+  {
+    "name": "Olympiad-200",
+    "n": 200,
+    "greedy_acc": 0.435,
+    "pilotC_lp_min_K4_T0.7_acc": 0.455,
+    "para_M3_modal_acc": 0.46,
+    "combined_para_pilotC_acc": 0.46,
+    "n_branched_in_combined": 100
+  },
+  {
+    "name": "MMLU-Pro-200",
+    "n": 200,
+    "greedy_acc": 0.56,
+    "pilotC_lp_min_K4_T0.7_acc": 0.61,
+    "para_M3_modal_acc": 0.585,
+    "combined_para_pilotC_acc": 0.59,
+    "n_branched_in_combined": 4
+  }
+]

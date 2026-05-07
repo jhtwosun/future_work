@@ -1,0 +1,12 @@
+{
+  "model": "mistralai/Mixtral-8x7B-Instruct-v0.1",
+  "n": 500,
+  "dataset": "MATH-500",
+  "greedy": {
+    "wallclock_sec": 42.64298129081726
+  },
+  "sc": {
+    "n_samples": 8,
+    "wallclock_sec": 159.41172528266907
+  }
+}

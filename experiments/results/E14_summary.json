@@ -1,0 +1,33 @@
+{
+  "model": "Qwen/Qwen3-8B (no-think)",
+  "n": 747,
+  "dataset": "TheoremQA",
+  "by_answer_type": {
+    "integer": 200,
+    "float": 360,
+    "list of integer": 51,
+    "bool": 112,
+    "list of float": 8,
+    "option": 16
+  },
+  "greedy": {
+    "accuracy": 0.5408299866131191,
+    "n_truncated": 99,
+    "by_type": {
+      "integer": 0.62,
+      "float": 0.3638888888888889,
+      "list of integer": 0.5098039215686274,
+      "bool": 1.0,
+      "list of float": 0.0,
+      "option": 0.6875
+    },
+    "wallclock_sec": 58.6124267578125
+  },
+  "sc": {
+    "n_samples": 8,
+    "majority_accuracy": 0.5876840696117804,
+    "any_accuracy": 0.6907630522088354,
+    "mean_top1_frac": 0.6623159303882196,
+    "wallclock_sec": 502.67587327957153
+  }
+}

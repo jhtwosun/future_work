@@ -1,0 +1,18 @@
+{
+  "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+  "n": 500,
+  "dataset": "MATH-500",
+  "greedy": {
+    "wallclock_sec": 1868.498394727707,
+    "mean_tokens": 3173.012,
+    "median_tokens": 2166.0,
+    "max_tokens": 8192,
+    "n_truncated": 57,
+    "mean_steps": 81.246
+  },
+  "sc": {
+    "n_samples": 4,
+    "n_problems": 200,
+    "wallclock_sec": 2972.954387664795
+  }
+}

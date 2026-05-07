@@ -1,0 +1,18 @@
+{
+  "model": "Qwen/Qwen3-8B (no-think)",
+  "n": 674,
+  "dataset": "OlympiadBench OE_TO_maths_en_COMP (text-only)",
+  "max_tokens": 4096,
+  "greedy": {
+    "accuracy": 0.5504451038575667,
+    "n_truncated": 108,
+    "wallclock_sec": 166.87172937393188
+  },
+  "sc": {
+    "n_samples": 8,
+    "majority_accuracy": 0.6216617210682492,
+    "any_accuracy": 0.7611275964391692,
+    "mean_top1_frac": 0.6648738872403561,
+    "wallclock_sec": 1372.0542874336243
+  }
+}

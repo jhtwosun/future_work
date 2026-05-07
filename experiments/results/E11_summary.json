@@ -1,0 +1,12 @@
+{
+  "model": "deepseek-ai/DeepSeek-V2-Lite-Chat",
+  "n": 500,
+  "dataset": "MATH-500",
+  "greedy": {
+    "wallclock_sec": 30.418758869171143
+  },
+  "sc": {
+    "n_samples": 8,
+    "wallclock_sec": 127.47476124763489
+  }
+}

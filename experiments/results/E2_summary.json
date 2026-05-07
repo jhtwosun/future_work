@@ -1,0 +1,21 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n": 933,
+  "dataset": "AIME 1983-2024",
+  "year_range": [
+    1983,
+    2024
+  ],
+  "greedy": {
+    "accuracy": 0.22615219721329047,
+    "parse_failures": 0,
+    "wallclock_sec": 72.29622745513916
+  },
+  "sc": {
+    "n_samples": 8,
+    "majority_accuracy": 0.2690246516613076,
+    "oracle_any": 0.41586280814576637,
+    "mean_top1_frac": 0.405010718113612,
+    "wallclock_sec": 500.8051481246948
+  }
+}

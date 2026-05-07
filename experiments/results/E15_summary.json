@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen3-8B (no-think)",
+  "n": 164,
+  "dataset": "HumanEval",
+  "greedy": {
+    "accuracy": 0.7682926829268293,
+    "wallclock_sec": 9.561033248901367
+  },
+  "sc": {
+    "n_samples": 8,
+    "pass_at_n": 0.9146341463414634,
+    "majority_correct": 0.8170731707317073,
+    "mean_top1_frac": 0.43140243902439024,
+    "wallclock_sec": 32.08450531959534
+  }
+}

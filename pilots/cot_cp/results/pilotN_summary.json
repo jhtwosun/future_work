@@ -1,0 +1,513 @@
+{
+  "alphas": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.39999999999999997,
+    0.44999999999999996,
+    0.49999999999999994,
+    0.5499999999999999,
+    0.6,
+    0.65,
+    0.7
+  ],
+  "rows": [
+    {
+      "score": "lp_min",
+      "alpha": 0.05,
+      "kept_acc_mean": 0.5218884455932548,
+      "kept_frac_mean": 0.9315199999999999,
+      "coverage_mean": 0.9457740467316305
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.1,
+      "kept_acc_mean": 0.5487951614593243,
+      "kept_frac_mean": 0.8384999999999999,
+      "coverage_mean": 0.8953852120212272
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.15,
+      "kept_acc_mean": 0.5563532013930967,
+      "kept_frac_mean": 0.77904,
+      "coverage_mean": 0.8436047812342993
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.2,
+      "kept_acc_mean": 0.5639145559862968,
+      "kept_frac_mean": 0.72138,
+      "coverage_mean": 0.7917374050861281
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.25,
+      "kept_acc_mean": 0.5668977509949901,
+      "kept_frac_mean": 0.6674999999999999,
+      "coverage_mean": 0.7367907674369529
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.3,
+      "kept_acc_mean": 0.5712087609196815,
+      "kept_frac_mean": 0.61914,
+      "coverage_mean": 0.6883506097667744
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.35,
+      "kept_acc_mean": 0.583419747418944,
+      "kept_frac_mean": 0.5625800000000001,
+      "coverage_mean": 0.6386260648750928
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.39999999999999997,
+      "kept_acc_mean": 0.5959141687829924,
+      "kept_frac_mean": 0.50744,
+      "coverage_mean": 0.5885280264988754
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.44999999999999996,
+      "kept_acc_mean": 0.603400967064786,
+      "kept_frac_mean": 0.45992000000000005,
+      "coverage_mean": 0.5399074117180979
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.49999999999999994,
+      "kept_acc_mean": 0.6175390615874283,
+      "kept_frac_mean": 0.4103,
+      "coverage_mean": 0.4930124137683483
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.5499999999999999,
+      "kept_acc_mean": 0.6203397560754075,
+      "kept_frac_mean": 0.36701999999999996,
+      "coverage_mean": 0.4434773313210755
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.6,
+      "kept_acc_mean": 0.62642886862907,
+      "kept_frac_mean": 0.3250599999999999,
+      "coverage_mean": 0.3965226088183906
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.65,
+      "kept_acc_mean": 0.6257743273066345,
+      "kept_frac_mean": 0.28456,
+      "coverage_mean": 0.3472301227053872
+    },
+    {
+      "score": "lp_min",
+      "alpha": 0.7,
+      "kept_acc_mean": 0.6278128353764951,
+      "kept_frac_mean": 0.24614,
+      "coverage_mean": 0.3009888321931821
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.05,
+      "kept_acc_mean": 0.5258892866014532,
+      "kept_frac_mean": 0.92334,
+      "coverage_mean": 0.9449775885165796
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.1,
+      "kept_acc_mean": 0.5373353987851311,
+      "kept_frac_mean": 0.8563200000000001,
+      "coverage_mean": 0.8953750821755179
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.15,
+      "kept_acc_mean": 0.5427769520972612,
+      "kept_frac_mean": 0.7992199999999999,
+      "coverage_mean": 0.8442991962904765
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.2,
+      "kept_acc_mean": 0.548192627740694,
+      "kept_frac_mean": 0.7447,
+      "coverage_mean": 0.7944759038176145
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.25,
+      "kept_acc_mean": 0.5539516910051754,
+      "kept_frac_mean": 0.68718,
+      "coverage_mean": 0.7409149276427561
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.3,
+      "kept_acc_mean": 0.5587325538459937,
+      "kept_frac_mean": 0.6379199999999999,
+      "coverage_mean": 0.6938800488389247
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.35,
+      "kept_acc_mean": 0.5588983522210376,
+      "kept_frac_mean": 0.59256,
+      "coverage_mean": 0.6449344748119803
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.39999999999999997,
+      "kept_acc_mean": 0.5626233343661788,
+      "kept_frac_mean": 0.5450200000000001,
+      "coverage_mean": 0.5966831195072452
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.44999999999999996,
+      "kept_acc_mean": 0.5744656250635871,
+      "kept_frac_mean": 0.4886,
+      "coverage_mean": 0.5463118337896283
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.49999999999999994,
+      "kept_acc_mean": 0.5810903263061394,
+      "kept_frac_mean": 0.44078,
+      "coverage_mean": 0.4991392994921167
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.5499999999999999,
+      "kept_acc_mean": 0.5802985003768244,
+      "kept_frac_mean": 0.39504000000000006,
+      "coverage_mean": 0.44702192556214515
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.6,
+      "kept_acc_mean": 0.585141679302439,
+      "kept_frac_mean": 0.34791999999999995,
+      "coverage_mean": 0.39651435311015104
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.65,
+      "kept_acc_mean": 0.5934458887442362,
+      "kept_frac_mean": 0.299,
+      "coverage_mean": 0.34571603192322775
+    },
+    {
+      "score": "lp_mean",
+      "alpha": 0.7,
+      "kept_acc_mean": 0.5989192259123004,
+      "kept_frac_mean": 0.25428000000000006,
+      "coverage_mean": 0.29730749171236687
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.05,
+      "kept_acc_mean": 0.644706494503951,
+      "kept_frac_mean": 0.7541800000000001,
+      "coverage_mean": 0.9453482416519715
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.1,
+      "kept_acc_mean": 0.6759933754748048,
+      "kept_frac_mean": 0.68054,
+      "coverage_mean": 0.8952451646517777
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.15,
+      "kept_acc_mean": 0.6836932030364595,
+      "kept_frac_mean": 0.63446,
+      "coverage_mean": 0.8443128014951463
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.2,
+      "kept_acc_mean": 0.6796843417122438,
+      "kept_frac_mean": 0.59878,
+      "coverage_mean": 0.7922241237149862
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.25,
+      "kept_acc_mean": 0.6817840391101356,
+      "kept_frac_mean": 0.55906,
+      "coverage_mean": 0.7417246209995874
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.3,
+      "kept_acc_mean": 0.6826059586327833,
+      "kept_frac_mean": 0.52246,
+      "coverage_mean": 0.6941507357727166
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.35,
+      "kept_acc_mean": 0.6838131221601705,
+      "kept_frac_mean": 0.4899,
+      "coverage_mean": 0.6520610223767281
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.39999999999999997,
+      "kept_acc_mean": 0.6860816070659344,
+      "kept_frac_mean": 0.45676,
+      "coverage_mean": 0.6098822995840304
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.44999999999999996,
+      "kept_acc_mean": 0.6936621562521291,
+      "kept_frac_mean": 0.42446,
+      "coverage_mean": 0.5726786903305947
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.49999999999999994,
+      "kept_acc_mean": 0.7061761872426302,
+      "kept_frac_mean": 0.38664000000000004,
+      "coverage_mean": 0.5310476620357437
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.5499999999999999,
+      "kept_acc_mean": 0.7186787779004402,
+      "kept_frac_mean": 0.3490599999999999,
+      "coverage_mean": 0.48733678797158064
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.6,
+      "kept_acc_mean": 0.7349039231811585,
+      "kept_frac_mean": 0.30713999999999997,
+      "coverage_mean": 0.4390034023343069
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.65,
+      "kept_acc_mean": 0.73652236041409,
+      "kept_frac_mean": 0.30399999999999994,
+      "coverage_mean": 0.43559439772709707
+    },
+    {
+      "score": "prm_min",
+      "alpha": 0.7,
+      "kept_acc_mean": 0.73652236041409,
+      "kept_frac_mean": 0.30399999999999994,
+      "coverage_mean": 0.43559439772709707
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.05,
+      "kept_acc_mean": 0.6312000503877202,
+      "kept_frac_mean": 0.77424,
+      "coverage_mean": 0.9482941877411405
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.1,
+      "kept_acc_mean": 0.6732327196110873,
+      "kept_frac_mean": 0.6839400000000001,
+      "coverage_mean": 0.8957866813304045
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.15,
+      "kept_acc_mean": 0.6767735612450497,
+      "kept_frac_mean": 0.64078,
+      "coverage_mean": 0.8440458666354624
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.2,
+      "kept_acc_mean": 0.6720719605456023,
+      "kept_frac_mean": 0.60588,
+      "coverage_mean": 0.7925766634000433
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.25,
+      "kept_acc_mean": 0.6719856477433481,
+      "kept_frac_mean": 0.5680000000000001,
+      "coverage_mean": 0.7428393274516225
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.3,
+      "kept_acc_mean": 0.6661997037601788,
+      "kept_frac_mean": 0.53604,
+      "coverage_mean": 0.6955347064148591
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.35,
+      "kept_acc_mean": 0.6605660861119163,
+      "kept_frac_mean": 0.50204,
+      "coverage_mean": 0.6455481680825313
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.39999999999999997,
+      "kept_acc_mean": 0.6617091432444235,
+      "kept_frac_mean": 0.4672799999999999,
+      "coverage_mean": 0.6015007769836962
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.44999999999999996,
+      "kept_acc_mean": 0.6754650585400022,
+      "kept_frac_mean": 0.41628,
+      "coverage_mean": 0.5462415848164648
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.49999999999999994,
+      "kept_acc_mean": 0.6978497655356292,
+      "kept_frac_mean": 0.3703399999999999,
+      "coverage_mean": 0.5019280847839492
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.5499999999999999,
+      "kept_acc_mean": 0.7165787298842423,
+      "kept_frac_mean": 0.32696,
+      "coverage_mean": 0.45528292400889847
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.6,
+      "kept_acc_mean": 0.7353392176107703,
+      "kept_frac_mean": 0.28276,
+      "coverage_mean": 0.4038871488635432
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.65,
+      "kept_acc_mean": 0.7474278512988062,
+      "kept_frac_mean": 0.24670000000000003,
+      "coverage_mean": 0.35861918627169254
+    },
+    {
+      "score": "prm_mean",
+      "alpha": 0.7,
+      "kept_acc_mean": 0.7616173540127591,
+      "kept_frac_mean": 0.20810000000000003,
+      "coverage_mean": 0.30860556248685195
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.05,
+      "kept_acc_mean": 0.6227197324904583,
+      "kept_frac_mean": 0.8685499999999999,
+      "coverage_mean": 0.9577950453020949
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.1,
+      "kept_acc_mean": 0.6627607190343078,
+      "kept_frac_mean": 0.7831999999999999,
+      "coverage_mean": 0.9191293551675844
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.15,
+      "kept_acc_mean": 0.6971679111751321,
+      "kept_frac_mean": 0.7117,
+      "coverage_mean": 0.8771337396073204
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.2,
+      "kept_acc_mean": 0.7357615278203238,
+      "kept_frac_mean": 0.6356,
+      "coverage_mean": 0.8262873820220881
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.25,
+      "kept_acc_mean": 0.7720368578606807,
+      "kept_frac_mean": 0.57385,
+      "coverage_mean": 0.7839389281847571
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.3,
+      "kept_acc_mean": 0.7870933251410451,
+      "kept_frac_mean": 0.545,
+      "coverage_mean": 0.761344119552604
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.35,
+      "kept_acc_mean": 0.786783636553799,
+      "kept_frac_mean": 0.51115,
+      "coverage_mean": 0.7142392347017659
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.39999999999999997,
+      "kept_acc_mean": 0.7891100960076645,
+      "kept_frac_mean": 0.4692,
+      "coverage_mean": 0.656733206829102
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.44999999999999996,
+      "kept_acc_mean": 0.7925596468312471,
+      "kept_frac_mean": 0.44945,
+      "coverage_mean": 0.6318683234279402
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.49999999999999994,
+      "kept_acc_mean": 0.7928209938722756,
+      "kept_frac_mean": 0.44784999999999997,
+      "coverage_mean": 0.6298482084854115
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.5499999999999999,
+      "kept_acc_mean": 0.7928209938722756,
+      "kept_frac_mean": 0.44784999999999997,
+      "coverage_mean": 0.6298482084854115
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.6,
+      "kept_acc_mean": 0.7928209938722756,
+      "kept_frac_mean": 0.44784999999999997,
+      "coverage_mean": 0.6298482084854115
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.65,
+      "kept_acc_mean": 0.7928209938722756,
+      "kept_frac_mean": 0.44784999999999997,
+      "coverage_mean": 0.6298482084854115
+    },
+    {
+      "score": "sc_top1",
+      "alpha": 0.7,
+      "kept_acc_mean": 0.7928209938722756,
+      "kept_frac_mean": 0.44784999999999997,
+      "coverage_mean": 0.6298482084854115
+    }
+  ],
+  "vanilla_acc_lp_set": 0.516,
+  "vanilla_acc_sc_set": 0.565,
+  "vanilla_acc_prm_set": 0.516
+}

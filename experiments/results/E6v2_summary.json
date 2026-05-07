@@ -1,0 +1,18 @@
+{
+  "model": "Qwen/Qwen3-8B (no-think)",
+  "n": 500,
+  "dataset": "MATH-500",
+  "greedy": {
+    "accuracy": 0.708,
+    "parse_failures": 0,
+    "n_truncated": 65,
+    "wallclock_sec": 35.2570321559906
+  },
+  "sc": {
+    "n_samples": 8,
+    "majority_accuracy": 0.77,
+    "oracle_any": 0.832,
+    "mean_top1_frac": 0.8435,
+    "wallclock_sec": 283.05126690864563
+  }
+}

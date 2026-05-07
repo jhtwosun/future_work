@@ -1,0 +1,17 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n": 500,
+  "dataset": "MATH-500",
+  "greedy": {
+    "accuracy": 0.516,
+    "parse_failures": 0,
+    "wallclock_sec": 24.262510299682617
+  },
+  "sc": {
+    "n_samples": 8,
+    "majority_accuracy": 0.546,
+    "oracle_any": 0.652,
+    "mean_top1_frac": 0.75125,
+    "wallclock_sec": 135.0078580379486
+  }
+}

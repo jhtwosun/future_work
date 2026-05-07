@@ -1,0 +1,119 @@
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "tag": "qwen25_32b",
+  "K": 4,
+  "T": 0.7,
+  "datasets": {
+    "math500": {
+      "vanilla_acc": 0.805,
+      "n": 200,
+      "greedy_time": 49.94435167312622,
+      "triggers": {
+        "lp_min": {
+          "acc": 0.81,
+          "delta": 0.0050000000000000044,
+          "n": 200,
+          "wallclock": 108.77543640136719
+        },
+        "top1_margin_min": {
+          "acc": 0.805,
+          "delta": 0.0,
+          "n": 200,
+          "wallclock": 100.8766577243805
+        },
+        "entropy_max": {
+          "acc": 0.8,
+          "delta": -0.0050000000000000044,
+          "n": 200,
+          "wallclock": 109.50334215164185
+        },
+        "tempered_kl_max": {
+          "acc": 0.805,
+          "delta": 0.0,
+          "n": 200,
+          "wallclock": 103.36449146270752
+        },
+        "kl_uniform_min": {
+          "acc": 0.805,
+          "delta": 0.0,
+          "n": 200,
+          "wallclock": 108.75488877296448
+        }
+      }
+    },
+    "aime": {
+      "vanilla_acc": 0.425,
+      "n": 200,
+      "greedy_time": 106.37018752098083,
+      "triggers": {
+        "lp_min": {
+          "acc": 0.435,
+          "delta": 0.010000000000000009,
+          "n": 200,
+          "wallclock": 193.65952730178833
+        },
+        "top1_margin_min": {
+          "acc": 0.445,
+          "delta": 0.020000000000000018,
+          "n": 200,
+          "wallclock": 201.3756709098816
+        },
+        "entropy_max": {
+          "acc": 0.44,
+          "delta": 0.015000000000000013,
+          "n": 200,
+          "wallclock": 198.4892692565918
+        },
+        "tempered_kl_max": {
+          "acc": 0.46,
+          "delta": 0.03500000000000003,
+          "n": 200,
+          "wallclock": 197.80235052108765
+        },
+        "kl_uniform_min": {
+          "acc": 0.44,
+          "delta": 0.015000000000000013,
+          "n": 200,
+          "wallclock": 198.89446330070496
+        }
+      }
+    },
+    "olympiad": {
+      "vanilla_acc": 0.435,
+      "n": 200,
+      "greedy_time": 89.51808857917786,
+      "triggers": {
+        "lp_min": {
+          "acc": 0.485,
+          "delta": 0.04999999999999999,
+          "n": 200,
+          "wallclock": 178.27873015403748
+        },
+        "top1_margin_min": {
+          "acc": 0.455,
+          "delta": 0.020000000000000018,
+          "n": 200,
+          "wallclock": 185.0301787853241
+        },
+        "entropy_max": {
+          "acc": 0.47,
+          "delta": 0.034999999999999976,
+          "n": 200,
+          "wallclock": 182.1243381500244
+        },
+        "tempered_kl_max": {
+          "acc": 0.45,
+          "delta": 0.015000000000000013,
+          "n": 200,
+          "wallclock": 188.1126410961151
+        },
+        "kl_uniform_min": {
+          "acc": 0.47,
+          "delta": 0.034999999999999976,
+          "n": 200,
+          "wallclock": 187.18132758140564
+        }
+      }
+    }
+  }
+}

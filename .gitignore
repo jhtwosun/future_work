@@ -1,0 +1,39 @@
+# Logs
+**/*.log
+experiments/logs/
+
+# Large trace files (per-token logprobs, hidden states, etc.)
+**/*_traces.jsonl
+**/*_greedy.jsonl
+**/*_sc.jsonl
+**/*_sc8_traces.jsonl
+**/*_sc_re.jsonl
+**/*_traces_re.jsonl
+experiments/results/*greedy*.jsonl
+experiments/results/*sc*.jsonl
+experiments/results/E*_*.jsonl
+
+# Numpy intermediate dumps
+**/*.npy
+
+# Pilot data caches
+pilots/cot_cp/data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# venv
+.venv/
+venv/
+
+# HuggingFace cache (should not be inside repo, but just in case)
+.cache/

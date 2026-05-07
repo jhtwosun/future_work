@@ -1,0 +1,15 @@
+{
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "n": 500,
+  "dataset": "MATH-500",
+  "greedy": {
+    "wallclock_sec": 31.137577533721924,
+    "n_truncated": 16,
+    "mean_tokens": 635.646,
+    "median_tokens": 514.5
+  },
+  "sc": {
+    "n_samples": 8,
+    "wallclock_sec": 185.51903629302979
+  }
+}

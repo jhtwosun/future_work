@@ -1,0 +1,9 @@
+{
+  "greedy_acc": 0.745,
+  "pilotC_K4_majority": 0.76,
+  "K4_n_alt": 200,
+  "pilotC_K8_majority": 0.76,
+  "K8_n_alt": 200,
+  "pilotC_K4_prm_selected": 0.775,
+  "pilotC_K8_prm_selected": 0.77
+}

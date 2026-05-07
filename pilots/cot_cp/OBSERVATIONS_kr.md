@@ -5,6 +5,7 @@
 > 1차 pass: Pilots 2-10 (GSM8K + MATH-500 trajectory-level CP)
 > 2차 pass: Pilots D, E, B, C (compute scaling, R1-Distill, OOD AIME, step branching)
 > 3차 pass: Pilots H, F, J, A, K (step grouping, weighted CP, bootstrap CI, PRM scoring + branching)
+> 4차 pass: Pilots N, M, I, L, O, G2 (Pareto figure 업데이트, ensemble, AIME 확장 OOD, rewrite cue, R1 PRM, R1 SC)
 
 ---
 
@@ -293,17 +294,109 @@ Pilot C 와 같은 protocol 이지만 worst step 을 PRM step reward 로 식별.
 
 ---
 
-## 4. 다음 세션 권장 pilot
+## 4. 4차 pass 추가 결과 (Pilots N, M, I, L, O, G2)
 
-| # | Pilot | 이유 | Status |
+### Pilot N — Pareto figure with PRM curve
+- `pilotN_pareto_with_prm.png` 생성 — lp_min, lp_mean, prm_min, prm_mean, sc_top1 5개 score 한 그림에. PRM curve 가 lp 와 sc 사이에 명확히 위치.
+
+### Pilot M — PRM + SC ensemble (200문제 교집합)
+
+| Score | Spearman ρ | CP@α=0.5 kept_acc | keep% |
 |---|---|---|---|
-| L | Step branching with rewrite-style prompting | Pilot K negative result 이후 가장 흥미로운 미해결 — explicit "rewrite step" 이 K-resample 보다 좋은지 | open ⭐ |
-| M | PRM + SC ensemble: 두 conformity score 결합 | Best-of-both-worlds operating point 가능성 | open |
-| G | R1-Distill SC@8 재실행 (50문제 × NS=4 등 작은 사이즈) | R1 row 채우기 | open |
-| I | GPQA-Diamond eval | AIME n=30 대체용 큰 OOD 셋 (198 문제) | open ⭐ |
-| N | Pilot 10 figure 에 PRM curve 추가 | 헤드라인 figure 업데이트 | quick |
+| **sc_top1** | **0.503** | 0.794 | 45% |
+| ens_z_sum | 0.473 | 0.791 | 35% |
+| ens_product | 0.447 | 0.794 | 35% |
+| prm_min | 0.331 | 0.692 | 42% |
+| prm_mean | 0.287 | 0.684 | 41% |
 
-⭐ 가 우선순위.
+→ **Pure SC top1 이 single-model conformity score 중 거의 optimal**. Ensemble 은 SC 와 비슷한 kept_acc (kept% 가 약간 작아짐 — slightly more selective). Decisive win 은 아님.
+
+### Pilot I — AIME 1983-2024 (n=300) — Pilot B (n=30) 대체
+
+| metric | value |
+|---|---|
+| AIME-extended greedy | **20.3%** (61/300) |
+| AIME-extended SC@8 majority | **23.3%** |
+| Mean SC top-1 fraction | 0.397 |
+
+OOD CP coverage (bootstrap 95% CI):
+
+| Score | α | Target | Vanilla cov [CI] | Kept acc | Keep% |
+|---|---|---|---|---|---|
+| **sc_top1** | 0.10 | 0.90 | 0.743 [0.640, 0.843] | **71.2%** | 24% |
+| **sc_top1** | 0.20 | 0.80 | 0.557 [0.441, 0.672] | **81.2%** | 16% |
+| **sc_top1** | 0.30 | 0.70 | 0.471 [0.355, 0.589] | **91.7%** | 12% |
+| sc_top1 | 0.50 | 0.50 | 0.271 [0.171, 0.373] | 100% | 6% |
+| lp_mean | 0.05 | 0.95 | 1.00 [1.0, 1.0] | 22.9% | 89% |
+| lp_mean | 0.50 | 0.50 | 0.738 [0.617, 0.849] | 25% | 33% |
+
+**핵심 두 가지 발견**:
+1. **OOD 실패 방향이 score 별로 다름**: lp_* 는 over-conservative (target 0.95 → 1.0), sc_top1 은 under-conservative (target 0.5 → 0.27). 다른 fix 필요.
+2. **Coverage 가 깨져도 selective accuracy 는 극적**: AIME 23% → 71% (24% 응답률에서, +48pt). 12% 응답률에서 92%. "8문제 중 1개만 답하면 거의 항상 맞음" 이 가능.
+
+### Pilot L — Rewrite-cue step branching
+
+| Policy | Accuracy | Recovered / Lost |
+|---|---|---|
+| Vanilla greedy | 52.0% | — |
+| Branch with cue ("Hmm wait, let me reconsider...") | 54.0% | 4 / 2 |
+| Branch no cue (Pilot C 재현) | 55.0% | 3 / 0 |
+| CP-triggered with cue | 53.0% | 2 / 1 |
+
+→ Cue 가 recovery 는 늘리지만 (4 vs 3) loss 도 같이 늘림 (2 vs 0). 순효과 wash. **Step-level branching 의 bottleneck 은 score 도 cue style 도 아니고 intervention class 자체** (K-resample at temp 0.7).
+
+### Pilot O — Cross-model PRM scoring (Qwen2.5-Math-PRM → R1-Distill)
+
+R1-Distill 200 traces (57개 truncated to 80 steps):
+
+| Score | α | Coverage | Kept acc | Keep% | Δ vs vanilla 0.59 |
+|---|---|---|---|---|---|
+| **prm_mean** | 0.50 | 0.485 | **0.770** | 37% | **+18.0pt** |
+| prm_min | 0.50 | 0.487 | 0.761 | 38% | +17.1pt |
+| prm_min | 0.30 | 0.692 | 0.746 | 55% | +15.6pt |
+| Spearman ρ(prm_mean) = 0.351 | (vs lp_mean ρ=0.204) | | | | |
+
+→ **Qwen2.5-Math-PRM 이 R1-Distill 이종 generator 에서도 작동**. Lift 크기 (+18pt) 가 native generator (Qwen2.5: +19pt) 와 비슷. **PRM 은 generator-agnostic** — paper 의 cross-model claim 가능.
+
+### Pilot G2 — R1-Distill SC@4 (n=100)
+
+| metric | value |
+|---|---|
+| Majority accuracy (N=4) | **0.630** (greedy 0.59 → +4pt) |
+| Mean SC top-1 fraction | **0.855** (vs Qwen 0.764 — 더 일관됨) |
+| Wallclock | 97s |
+
+R1-Distill 은 stochastic sample 간 일관성이 더 큼 — top1 fraction 0.86 vs Qwen 0.76. SC@4 의 4-level quantization 때문에 CP cutoff 가 거칠어짐. R1 에는 N≥8 필요.
+
+---
+
+## 5. 최종 Score Family Ladder (MATH-500, Qwen2.5-7B, α=0.5)
+
+| Score | Compute | Kept acc | vs vanilla 51.6% |
+|---|---|---|---|
+| greedy (no CP) | 1× | 51.6% | — |
+| lp_min | 1× | 62.0% | +10.4pt |
+| **prm_min** | **2×** | **70.7%** | **+19.1pt** |
+| sc_top1 (SC@8) | 8× | 79.3% | +27.7pt |
+| sc_top1 (SC@16) | 16× | 84.1% | +32.5pt |
+| sc_top1 (SC@32) | 32× | 83.5% | saturated |
+| ens_z_sum (PRM+SC) | 10× | 79.1% | ≈ SC alone |
+
+---
+
+## 6. 4차 pass 후 Bottom Line
+
+**Paper 에 정착된 4가지**:
+1. **Trajectory-level CP machinery 작동 확인** — 5 score families × 2 dataset × 5 α × 200 seed × 500 bootstrap 검증
+2. **Score-family Pareto 완성** — lp_min (1×) → PRM-min (2×) → SC-top1 (8×). PRM 이 4차 pass 의 가장 큰 새 발견
+3. **OOD 실패는 score-별로 다른 방향** — lp_* over-conservative, sc_top1 under-conservative. weighted CP 가 lp_* high-α 회복; sc_top1 under-coverage 는 미해결
+4. **Cross-generator PRM 전이** — Qwen2.5-Math-PRM 을 R1-Distill 에 적용 → +18pt (native +19pt 와 동등). PRM 은 generator-agnostic
+
+**미해결 2가지**:
+1. **Step-level branching 은 사실상 closed** — Pilots C/K/L 모두 +1~2pt 또는 0pt. Intervention class 자체가 bottleneck. Paper 에서는 explored-and-rejected 로 frame 하거나 다른 mechanism (token-level edit, search expansion) 필요
+2. **OOD coverage gap 완전 닫지 못함** — sc_top1 under-coverage 는 weighted CP 로도 안 풀림. Conditional CP / group-conditional / per-domain calibration 필요할 수 있음
+
+**권장 paper framing**: CoT-CP = "lp/PRM/SC score 를 calibrated selective predictor 로 변환하는 ***trajectory-level coverage layer***." PRM 은 새 mid-cost operating point. Step-branching 은 explored-and-rejected. OOD weighted CP 는 robustness extension. 헤드라인 figure 는 3개 score family × CP curve + vanilla SC saturation 곡선 한 장.
 
 ---
 

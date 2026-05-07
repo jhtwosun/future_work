@@ -1,0 +1,10 @@
+{
+  "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+  "dataset": "MATH-500",
+  "n": 100,
+  "n_samples": 4,
+  "majority_accuracy": 0.63,
+  "oracle_any": 0.66,
+  "mean_top1_frac": 0.855,
+  "wallclock_sec": 97.05355262756348
+}

@@ -1,0 +1,17 @@
+{
+  "model": "Qwen/Qwen3-8B (reparsed)",
+  "n": 500,
+  "dataset": "MATH-500",
+  "greedy": {
+    "accuracy": 0.37,
+    "n": 500
+  },
+  "sc": {
+    "n_samples": 8,
+    "majority_accuracy": 0.362,
+    "any_accuracy": 0.534,
+    "n": 500
+  },
+  "n_re_classified_sc": 0,
+  "note": "SC is approximate: only majority_pred could be re-evaluated against gold (sample texts not stored)."
+}

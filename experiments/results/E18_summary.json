@@ -1,0 +1,18 @@
+{
+  "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+  "n": 500,
+  "dataset": "MATH-500",
+  "greedy": {
+    "wallclock_sec": 1495.37300491333,
+    "mean_tokens": 2883.384,
+    "median_tokens": 1913.5,
+    "max_tokens": 8192,
+    "n_truncated": 46,
+    "mean_steps": 78.366
+  },
+  "sc": {
+    "n_samples": 4,
+    "n_problems": 100,
+    "wallclock_sec": 1039.9874260425568
+  }
+}

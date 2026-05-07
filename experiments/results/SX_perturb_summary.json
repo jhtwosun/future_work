@@ -1,0 +1,93 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n": 200,
+  "greedy": {
+    "accuracy": 0.74,
+    "wallclock_sec": 12.338606357574463
+  },
+  "singleshot_T0.3": {
+    "agreement_rate_with_greedy": 0.785,
+    "wallclock_sec": 13.153294563293457
+  },
+  "singleshot_T0.7": {
+    "agreement_rate_with_greedy": 0.7,
+    "wallclock_sec": 13.435410499572754
+  },
+  "singleshot_T1.0": {
+    "agreement_rate_with_greedy": 0.74,
+    "wallclock_sec": 12.573375463485718
+  },
+  "xtemp_N2": {
+    "wallclock_sec": 18.196176767349243
+  },
+  "xtemp_N4": {
+    "wallclock_sec": 28.936089992523193
+  },
+  "score_corr_with_greedy_correct": {
+    "para_M2_agree_greedy": {
+      "rho": 0.6501788823277193,
+      "p": 2.0579611753750529e-25,
+      "n": 200
+    },
+    "para_M2_consensus": {
+      "rho": 0.4377989317671478,
+      "p": 9.004374022726162e-11,
+      "n": 200
+    },
+    "para_M3_agree_greedy": {
+      "rho": 0.6976000916228831,
+      "p": 1.7317234250448325e-30,
+      "n": 200
+    },
+    "para_M3_consensus": {
+      "rho": 0.5075405921888454,
+      "p": 1.7172939244671264e-14,
+      "n": 200
+    },
+    "singleshot_T0.3_agree": {
+      "rho": 0.5776890522474122,
+      "p": 3.3795057967285187e-19,
+      "n": 200
+    },
+    "singleshot_T0.7_agree": {
+      "rho": 0.5571932433763984,
+      "p": 1.0458620331863338e-17,
+      "n": 200
+    },
+    "singleshot_T1.0_agree": {
+      "rho": 0.5582120582120581,
+      "p": 8.8672404841684e-18,
+      "n": 200
+    },
+    "stepmask_J2_stability": {
+      "rho": 0.5687733721354211,
+      "p": 3.018017302953005e-17,
+      "n": 185
+    },
+    "stepmask_J3_stability": {
+      "rho": 0.5590159297680617,
+      "p": 1.3433743085386082e-16,
+      "n": 185
+    },
+    "xtemp_N2_agree_greedy": {
+      "rho": 0.6461698061946409,
+      "p": 5.028245010613056e-25,
+      "n": 200
+    },
+    "xtemp_N2_top1_inc_greedy": {
+      "rho": 0.5575222557709654,
+      "p": 9.916335394727668e-18,
+      "n": 200
+    },
+    "xtemp_N4_agree_greedy": {
+      "rho": 0.6100468051542985,
+      "p": 8.940327836641159e-22,
+      "n": 200
+    },
+    "xtemp_N4_top1_inc_greedy": {
+      "rho": 0.5735963585247597,
+      "p": 6.836614502105337e-19,
+      "n": 200
+    }
+  }
+}

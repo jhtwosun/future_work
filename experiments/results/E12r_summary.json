@@ -1,0 +1,36 @@
+{
+  "model": "Qwen/Qwen3-8B (no-think, max_tokens=2560)",
+  "n": 4192,
+  "dataset": "MMLU-Pro STEM",
+  "by_category": {
+    "chemistry": 1132,
+    "math": 1351,
+    "physics": 1299,
+    "computer science": 410
+  },
+  "max_tokens": 2560,
+  "greedy": {
+    "accuracy": 0.7497614503816794,
+    "by_category": {
+      "chemistry": 0.7049469964664311,
+      "math": 0.8378978534418949,
+      "physics": 0.7182448036951501,
+      "computer science": 0.6829268292682927
+    },
+    "n_truncated": 209,
+    "wallclock_sec": 425.440616607666
+  },
+  "sc": {
+    "n_samples": 8,
+    "majority_accuracy": 0.799618320610687,
+    "any_accuracy": 0.9060114503816794,
+    "by_category": {
+      "chemistry": 0.7614840989399293,
+      "math": 0.8586232420429312,
+      "physics": 0.7913779830638953,
+      "computer science": 0.7365853658536585
+    },
+    "mean_top1_frac": 0.8559160305343512,
+    "wallclock_sec": 3027.0642302036285
+  }
+}

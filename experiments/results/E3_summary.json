@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n": 1319,
+  "dataset": "GSM8K",
+  "greedy": {
+    "accuracy": 0.8976497346474602,
+    "wallclock_sec": 24.285797119140625
+  },
+  "sc": {
+    "n_samples": 8,
+    "majority_accuracy": 0.931008339651251,
+    "oracle_any": 0.9711902956785443,
+    "mean_top1_frac": 0.9243745261561789,
+    "wallclock_sec": 140.69739603996277
+  }
+}

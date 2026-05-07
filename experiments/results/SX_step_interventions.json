@@ -1,0 +1,24 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n": 200,
+  "greedy": {
+    "accuracy": 0.745,
+    "wallclock_sec": 14.816969156265259
+  },
+  "f1_forbidden_top1": {
+    "accuracy": 0.715,
+    "n_evaluated": 200,
+    "n_recovered": 8,
+    "n_lost": 14
+  },
+  "i3_system_prompt_modal": {
+    "accuracy": 0.75,
+    "wallclock_sec_total": 51.460896492004395
+  },
+  "pilotC_baseline_K4_resample": {
+    "accuracy": 0.77,
+    "n_evaluated": 200,
+    "n_recovered": 9,
+    "n_lost": 4
+  }
+}

@@ -3,18 +3,14 @@
 experiments/logs/
 
 # Large trace files (per-token logprobs, hidden states, etc.)
-**/*_traces.jsonl
-**/*_greedy.jsonl
-**/*_sc.jsonl
-**/*_sc8_traces.jsonl
-**/*_sc_re.jsonl
-**/*_traces_re.jsonl
-experiments/results/*greedy*.jsonl
-experiments/results/*sc*.jsonl
-experiments/results/E*_*.jsonl
+**/*.jsonl
+!**/pilot5_prm800k_sample.jsonl
 
 # Numpy intermediate dumps
 **/*.npy
+
+# Greedy raw data dumps (large)
+experiments/results/SX_greedy_data.json
 
 # Pilot data caches
 pilots/cot_cp/data/

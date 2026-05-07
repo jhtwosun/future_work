@@ -1,0 +1,29 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "tag": "qwen25_7b",
+  "dataset": "aime",
+  "n": 200,
+  "vanilla_acc": 0.27,
+  "results": {
+    "self_correct_insertion": {
+      "acc": 0.27,
+      "delta": 0.0,
+      "n": 200
+    },
+    "step_excise": {
+      "acc": 0.2809917355371901,
+      "delta": 0.010991735537190073,
+      "n": 121
+    },
+    "backtrack_2step": {
+      "acc": 0.26424870466321243,
+      "delta": -0.005751295336787587,
+      "n": 193
+    },
+    "K4_majority": {
+      "acc": 0.33,
+      "delta": 0.06,
+      "n": 200
+    }
+  }
+}

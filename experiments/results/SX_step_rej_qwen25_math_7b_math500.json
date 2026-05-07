@@ -1,0 +1,29 @@
+{
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "tag": "qwen25_math_7b",
+  "dataset": "math500",
+  "n": 200,
+  "vanilla_acc": 0.8,
+  "results": {
+    "self_correct_insertion": {
+      "acc": 0.8,
+      "delta": 0.0,
+      "n": 200
+    },
+    "step_excise": {
+      "acc": 0.7786259541984732,
+      "delta": -0.021374045801526798,
+      "n": 131
+    },
+    "backtrack_2step": {
+      "acc": 0.8,
+      "delta": 0.0,
+      "n": 195
+    },
+    "K4_majority": {
+      "acc": 0.81,
+      "delta": 0.010000000000000009,
+      "n": 200
+    }
+  }
+}

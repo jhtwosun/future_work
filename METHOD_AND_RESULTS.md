@@ -33,7 +33,7 @@ LLM이 reasoning trace를 생성할 때, 어떤 step-level confidence 신호든 
 |---|---|---|
 | `lp_min` | $\min_t \frac{1}{|S_t|}\sum_u \log p_\theta(s_{t,u})$ — 최악 step의 평균 log-prob | **1×** (free, included in greedy decode) |
 | `prm_min` | $\min_t \mathrm{PRM}(s_t \mid X)$ — Qwen2.5-Math-PRM-7B step rewards 최소 | **2×** (1× generator + 1× PRM forward) |
-| `sc_top1` | $\frac{\#\{j: \hat{Y}_j = \mathrm{majority}\}}{N}$ — N samples의 다수결 비율 | **N×** (N stochastic samples) |
+| `sc_top1` | $\frac{|\{j: \hat{Y}_j = \mathrm{majority}\}|}{N}$ — N samples의 다수결 비율 | **N×** (N stochastic samples) |
 
 **Step 2: Calibration**. Calibration set의 *correct* trajectories만 모아 step-aggregated score $\bar S_i = \phi(R_i)$의 lower $\alpha$-quantile $\hat q_\alpha$ 계산.
 

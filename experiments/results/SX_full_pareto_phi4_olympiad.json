@@ -1,0 +1,37 @@
+{
+  "model": "microsoft/phi-4",
+  "tag": "phi4",
+  "dataset": "olympiad",
+  "n": 500,
+  "vanilla_acc": 0.508,
+  "results": {
+    "always_K4": {
+      "acc": 0.522,
+      "delta": 0.014000000000000012,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 5.0
+    },
+    "gate_combined_f0.5_K4": {
+      "acc": 0.52,
+      "delta": 0.01200000000000001,
+      "n": 500,
+      "flagged_n": 451,
+      "avg_compute": 4.6080000000000005
+    },
+    "gate_ent_f0.5_K4": {
+      "acc": 0.52,
+      "delta": 0.01200000000000001,
+      "n": 500,
+      "flagged_n": 250,
+      "avg_compute": 3.0
+    },
+    "always_K2": {
+      "acc": 0.51,
+      "delta": 0.0020000000000000018,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 3.0
+    }
+  }
+}

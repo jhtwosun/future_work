@@ -1,0 +1,30 @@
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "tag": "qwen25_32b",
+  "dataset": "olympiad",
+  "n": 500,
+  "vanilla_acc": 0.49,
+  "results": {
+    "always_K4": {
+      "acc": 0.54,
+      "delta": 0.050000000000000044,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 5.0
+    },
+    "gate_combined_f0.5_K4": {
+      "acc": 0.526,
+      "delta": 0.03600000000000003,
+      "n": 500,
+      "flagged_n": 419,
+      "avg_compute": 4.352
+    },
+    "gate_ent_f0.5_K4": {
+      "acc": 0.506,
+      "delta": 0.016000000000000014,
+      "n": 500,
+      "flagged_n": 250,
+      "avg_compute": 3.0
+    }
+  }
+}

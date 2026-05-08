@@ -1,0 +1,37 @@
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "tag": "qwen25_32b",
+  "dataset": "math500",
+  "n": 500,
+  "vanilla_acc": 0.784,
+  "results": {
+    "always_K4": {
+      "acc": 0.802,
+      "delta": 0.018000000000000016,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 5.0
+    },
+    "gate_combined_f0.5_K4": {
+      "acc": 0.796,
+      "delta": 0.01200000000000001,
+      "n": 500,
+      "flagged_n": 407,
+      "avg_compute": 4.256
+    },
+    "gate_ent_f0.5_K4": {
+      "acc": 0.788,
+      "delta": 0.0040000000000000036,
+      "n": 500,
+      "flagged_n": 250,
+      "avg_compute": 3.0
+    },
+    "always_K2": {
+      "acc": 0.794,
+      "delta": 0.010000000000000009,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 3.0
+    }
+  }
+}

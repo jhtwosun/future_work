@@ -1,0 +1,37 @@
+{
+  "model": "microsoft/phi-4",
+  "tag": "phi4",
+  "dataset": "math500",
+  "n": 500,
+  "vanilla_acc": 0.766,
+  "results": {
+    "always_K4": {
+      "acc": 0.782,
+      "delta": 0.016000000000000014,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 5.0
+    },
+    "gate_combined_f0.5_K4": {
+      "acc": 0.786,
+      "delta": 0.020000000000000018,
+      "n": 500,
+      "flagged_n": 450,
+      "avg_compute": 4.6
+    },
+    "gate_ent_f0.5_K4": {
+      "acc": 0.772,
+      "delta": 0.006000000000000005,
+      "n": 500,
+      "flagged_n": 250,
+      "avg_compute": 3.0
+    },
+    "always_K2": {
+      "acc": 0.774,
+      "delta": 0.008000000000000007,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 3.0
+    }
+  }
+}

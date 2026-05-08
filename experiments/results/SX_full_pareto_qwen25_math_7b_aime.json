@@ -25,6 +25,27 @@
       "n": 500,
       "flagged_n": 250,
       "avg_compute": 3.0
+    },
+    "always_K8": {
+      "acc": 0.342,
+      "delta": 0.01200000000000001,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 9.0
+    },
+    "gate_combined_f0.5_K8": {
+      "acc": 0.348,
+      "delta": 0.01799999999999996,
+      "n": 500,
+      "flagged_n": 454,
+      "avg_compute": 8.264
+    },
+    "always_K2": {
+      "acc": 0.33,
+      "delta": 0.0,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 3.0
     }
   }
 }

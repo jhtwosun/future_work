@@ -33,3 +33,4 @@ venv/
 
 # HuggingFace cache (should not be inside repo, but just in case)
 .cache/
+.claude/

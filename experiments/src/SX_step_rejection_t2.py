@@ -145,11 +145,27 @@ def main():
         for step_lp in o.logprobs or []:
             if step_lp is None:
                 chosen_lps.append(float("nan")); distribs.append(None); continue
-            entries = sorted(step_lp.items(), key=lambda kv: -kv[1].logprob)
-            chosen_lps.append(entries[0][1].logprob)
-            entries_lps = np.array([e.logprob for e in entries], dtype=float)
-            probs = np.exp(entries_lps - entries_lps.max()); probs = probs / probs.sum()
-            distribs.append({"probs": probs.tolist(), "lps": entries_lps.tolist()})
+            # Convert each value to a logprob float robustly
+            def _lp_of(e):
+                if hasattr(e, "logprob"):
+                    return e.logprob
+                if isinstance(e, (tuple, list)) and len(e) > 0:
+                    return float(e[0])
+                if isinstance(e, (int, float)):
+                    return float(e)
+                return float("nan")
+            try:
+                items = list(step_lp.items())
+                items.sort(key=lambda kv: -_lp_of(kv[1]))
+                if items:
+                    chosen_lps.append(_lp_of(items[0][1]))
+                    entries_lps = np.array([_lp_of(it[1]) for it in items], dtype=float)
+                    probs = np.exp(entries_lps - entries_lps.max()); probs = probs / probs.sum()
+                    distribs.append({"probs": probs.tolist(), "lps": entries_lps.tolist()})
+                else:
+                    chosen_lps.append(float("nan")); distribs.append(None)
+            except Exception:
+                chosen_lps.append(float("nan")); distribs.append(None)
         boundaries = find_step_boundaries(tok_strs)
         n = len(tok_ids)
         step_lps = step_lp_means(chosen_lps, boundaries, n)

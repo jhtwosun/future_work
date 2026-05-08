@@ -1,0 +1,51 @@
+{
+  "model": "microsoft/phi-4",
+  "tag": "phi4",
+  "dataset": "aime",
+  "n": 500,
+  "vanilla_acc": 0.308,
+  "results": {
+    "always_K4": {
+      "acc": 0.344,
+      "delta": 0.035999999999999976,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 5.0
+    },
+    "gate_combined_f0.5_K4": {
+      "acc": 0.334,
+      "delta": 0.026000000000000023,
+      "n": 500,
+      "flagged_n": 469,
+      "avg_compute": 4.752
+    },
+    "gate_ent_f0.5_K4": {
+      "acc": 0.318,
+      "delta": 0.010000000000000009,
+      "n": 500,
+      "flagged_n": 250,
+      "avg_compute": 3.0
+    },
+    "always_K8": {
+      "acc": 0.344,
+      "delta": 0.035999999999999976,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 9.0
+    },
+    "gate_combined_f0.5_K8": {
+      "acc": 0.344,
+      "delta": 0.035999999999999976,
+      "n": 500,
+      "flagged_n": 469,
+      "avg_compute": 8.504
+    },
+    "always_K2": {
+      "acc": 0.32,
+      "delta": 0.01200000000000001,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 3.0
+    }
+  }
+}

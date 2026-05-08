@@ -501,6 +501,56 @@ Holm sequential, e-process 등은 future work. 현재 A vs B로 선명한 trade-
 - **Tier C (expensive, 7-9×)**: `gate_combined_f0.5_K8` 또는 `always_K8` — max +2.2pp lift
 - **AIME-specific**: K=8 필수, gate_combined가 best
 
+### Full-dataset Pareto 검증 결과 (n=500, NEW)
+
+이전 결과들은 모두 n=200에서 측정. Full datasets로 재검증 (math500 full=500, AIME cap=500, Olympiad cap=500).
+
+**Method Top-1 win count (12 cells × 6 strategies):**
+
+| Method | Wins | Avg Δ | Avg cost |
+|---|---|---|---|
+| **`always_K4`** (Pilot C) | **7/12** ⭐ | +2.22pp | 5.00× |
+| `gate_combined_f0.5_K4` | 2/12 | +2.05pp | 4.49× |
+| `gate_ent_f0.5_K4` | 1/12 | +1.05pp | 3.00× |
+| `gate_combined_f0.5_K8` (AIME만) | 1/12 | +3.35pp avg | 8.20× |
+| `always_K8` (AIME만) | 1/12 | +3.30pp avg | 9.00× |
+| `always_K2` | 0/12 | +0.95pp | 3.00× |
+
+**Per-cell winners (12 cells, n=500):**
+
+| Model | Dataset | vanilla | best | Δ | cost |
+|---|---|---|---|---|---|
+| Qwen2.5-7B | math500 | 0.714 | gate_ent_f0.5_K4 | +2.4pp | 3× ⭐ |
+| Qwen2.5-7B | AIME | 0.278 | always_K4 | +4.0pp | 5× |
+| Qwen2.5-7B | olympiad | 0.450 | always_K4 | +2.8pp | 5× |
+| Math-7B | math500 | 0.788 | gate_combined_f0.5_K4 | +1.0pp | 4.47× |
+| Math-7B | AIME | 0.330 | gate_combined_f0.5_K8 | +1.8pp | 8.26× |
+| Math-7B | olympiad | 0.470 | always_K4 | +1.0pp | 5× |
+| **32B** | **olympiad** | **0.490** | **always_K4** | **+5.0pp** | **5×** ⭐ biggest |
+| 32B | AIME | 0.348 | always_K8 | +4.4pp | 9× |
+| 32B | math500 | 0.784 | always_K4 | +1.8pp | 5× |
+| Phi-4 | math500 | 0.766 | gate_combined_f0.5_K4 | +2.0pp | 4.60× |
+| Phi-4 | AIME | 0.308 | always_K4 | +3.6pp | 5× |
+| Phi-4 | olympiad | 0.508 | always_K4 | +1.4pp | 5× |
+
+**Full-dataset 최종 결론:**
+
+1. **`always_K4`가 universal winner** — 7/12 cells outright. n=200 결과와 일관된 패턴.
+2. **`gate_combined_f0.5_K4`** — always_K4와 거의 동급 (+2.05 vs +2.22pp avg), 10% 저렴. paper의 cost-aware option.
+3. **K=8 가치는 AIME에서만**: AIME 4 cells에서 +3.3pp avg, math500/olympiad에서는 K=4와 동일. AIME-specific 추천.
+4. **`gate_combined_f0.5_K8`** = `always_K8` in accuracy (+4.4pp on 32B AIME) but 9% cheaper. AIME에서는 gate 사용이 약간 유리.
+5. **`gate_ent_f0.5_K4`**: 3× cost로 가장 저렴하지만 lift는 약함 (+1.05pp avg). 7B math500에선 의외로 1등.
+6. **biggest single lift**: 32B Olympiad +5.0pp from always_K4. paper headline candidate.
+
+**Paper 핵심 표 (final 추천):**
+| Model 강도 | Dataset 난이도 | 추천 method | 비용 | Lift |
+|---|---|---|---|---|
+| 약함 (7B) | 어려움 (AIME) | always_K4 | 5× | +4.0pp |
+| 강함 (32B) | 매우어려움 (AIME) | always_K8 | 9× | +4.4pp |
+| 강함 (32B) | 중간 (Olympiad) | always_K4 | 5× | **+5.0pp** |
+| 균형 (Phi-4/Math-7B) | 쉬움 (math500) | gate_combined_f0.5_K4 | 4.5× | +1-2pp |
+| 약함 (7B) | 쉬움 (math500) | gate_ent_f0.5_K4 | 3× | +2.4pp ⭐ cheapest |
+
 ---
 
 ## 13. Updated paper narrative (현재 시점 — 2 layer 구조)

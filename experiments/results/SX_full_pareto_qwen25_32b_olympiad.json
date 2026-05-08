@@ -25,6 +25,13 @@
       "n": 500,
       "flagged_n": 250,
       "avg_compute": 3.0
+    },
+    "always_K2": {
+      "acc": 0.502,
+      "delta": 0.01200000000000001,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 3.0
     }
   }
 }

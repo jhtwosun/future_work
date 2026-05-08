@@ -1,6 +1,7 @@
 # Literature Review 01: Conformal Prediction for Large Language Models
 
 **Compiled:** 2026-05-05
+**Last updated:** 2026-05-08 — added Thought Calibration (EMNLP 2025), CP Beyond the Seen (NeurIPS 2025), Paraphrase-Robust CP (ICLR 2026 submission), CP+ASP Scaffolds, Unsupervised Conformal Prediction (UCP), CP: A Data Perspective survey. See §2.17–2.22 and updated §8 gap analysis.
 **Scope:** Foundational CP + 2023-2026 papers on CP applied to LLMs/VLMs.
 **For projects:** CoT-CP (step-level CP for chain-of-thought), CoT-Tool (calibrated tool routing), CG-VL (PMI-based conformity score for VLM hallucination).
 
@@ -166,6 +167,54 @@ These are background; the user already knows them.
 - **Venue:** TACL 2024
 - **Link:** https://aclanthology.org/2024.tacl-1.82/
 - **TL;DR:** Comprehensive survey of CP-for-NLP; categorizes by task and exchangeability assumption. Mandatory citation.
+
+### 2.17 Stewart et al. — Thought Calibration ⚠️ HIGHEST-THREAT 2025 ADDITION
+- **Title:** Thought Calibration: Efficient and Confident Test-Time Scaling
+- **Authors:** Stewart et al.
+- **Venue:** EMNLP 2025 (also arXiv 2505.18404)
+- **Links:** https://aclanthology.org/2025.emnlp-main.722.pdf , https://arxiv.org/pdf/2505.18404
+- **TL;DR:** Applies CP to DeepSeek-R1 reasoning trajectories to decide *when to stop thinking*. Achieves up to 60% reduction in thinking tokens at full performance on in-distribution; 20% reduction on DeepSeek-distilled Qwen-2.5 32B over math/science. Explicitly frames stopping rule via finite-sample coverage.
+- **Relevance:** **CoT-CP** — *single highest-threat paper* for CoT-CP. Same problem (calibrated test-time scaling), same era (May–Sep 2025), overlapping benchmarks (R1 / R1-distill family on math reasoning).
+- **Differentiation from CoT-CP:** (i) Thought Calibration is *online stopping-rule* CP — decides when to terminate a single reasoning trace, while CoT-CP is *post-hoc selective filtering* over completed trajectories; (ii) CoT-CP introduces score-family Pareto (Theorem 2 — lp/PRM/SC ladder) which Thought Calibration does not; (iii) CoT-CP introduces empirical-PMF weighted CP for discrete OOD shift (Theorem 3) which Thought Calibration does not address; (iv) CoT-CP covers 11 models × 7 datasets vs Thought Calibration's narrower R1-family scope. Must explicitly cite and benchmark against in §3 and §5.
+- **Gap that remains:** No multi-score Pareto, no OOD coverage analysis, no PRM as a mid-cost operating point.
+
+### 2.18 Conformal Prediction Beyond the Seen — Missing Mass for Generative Models
+- **Title:** Conformal Prediction Beyond the Seen: A Missing Mass Perspective for Uncertainty Quantification in Generative Models
+- **Venue:** NeurIPS 2025
+- **Link:** https://neurips.cc/virtual/2025/poster/118606
+- **TL;DR:** Brings the *missing-mass* (Good-Turing) perspective to CP for generative models. Bounds the probability of unseen outputs in the prediction set, addressing a gap that standard exchangeability-based CP cannot handle for open-ended generation.
+- **Relevance:** **Common** — important theoretical addition for any open-ended generation CP. Particularly relevant for CoT-CP where "novel reasoning traces" at test time may not be represented in calibration.
+- **Gap:** Missing-mass framing assumes a fixed atomic output space; reasoning traces are compositional / unbounded — not directly applicable but a useful framing.
+
+### 2.19 Paraphrase-Robust Conformal Prediction
+- **Title:** Paraphrase-Robust Conformal Prediction for Reliable LLM Uncertainty Quantification
+- **Venue:** ICLR 2026 submission (under review)
+- **Link:** https://openreview.net/forum?id=Uf04r8gDn7
+- **TL;DR:** Builds CP framework that is robust to paraphrase-induced score variance: introduces a paraphrase-aware nonconformity score that ensures valid coverage across semantically equivalent prompts.
+- **Relevance:** **CoT-CP** — directly relevant to our `SX_paraphrase_cross_dataset` experiment. Should be cited as motivation for paraphrase-robustness experiments and benchmarked.
+- **Gap:** Sentence-level paraphrase, not multi-step reasoning paraphrase; no PRM/SC integration.
+
+### 2.20 An Empirical Study of CP in LLM with ASP Scaffolds
+- **Title:** An Empirical Study of Conformal Prediction in LLM with ASP Scaffolds for Robust Reasoning
+- **Venue:** arXiv 2503.05439 (March 2025)
+- **Link:** https://arxiv.org/html/2503.05439v1
+- **TL;DR:** Combines Answer Set Programming (ASP) scaffolds with Conformal Language Modeling to provide statistical guarantees on multi-step reasoning correctness. Evaluates on logical reasoning benchmarks.
+- **Relevance:** **CoT-CP** — alternative architecture (symbolic scaffold + CP). Does not compete directly because it requires ASP encoding, but worth citing as evidence that "CP for multi-step reasoning" is an active area.
+- **Gap:** Restricted to formally encodable reasoning; no support for free-form math/science CoT.
+
+### 2.21 Unsupervised Conformal Prediction (UCP)
+- **Title:** Unsupervised Conformal Inference: Bootstrapping and Alignment to Control LLM Uncertainty
+- **Venue:** arXiv 2509.23002 (September 2025)
+- **Link:** https://arxiv.org/html/2509.23002
+- **TL;DR:** Operates without labels: uses bootstrap calibration + conformal alignment to reconcile heterogeneous modalities. Provides distribution-free finite-sample guarantees and reports strong gains in hallucination detection / factuality.
+- **Relevance:** **CG-VL** (label-free calibration is essential for VLM hallucination where ground-truth grounding is hard); **CoT-Tool** (tool-trigger calibration without labels).
+- **Gap:** Does not handle reasoning structure; complementary not competing for CoT-CP.
+
+### 2.22 CP: A Data Perspective (ACM Computing Surveys)
+- **Title:** Conformal Prediction: A Data Perspective
+- **Venue:** ACM Computing Surveys 2025
+- **Link:** https://dl.acm.org/doi/10.1145/3736575
+- **TL;DR:** Companion survey to Campos+ TACL 2024 with stronger emphasis on data-centric considerations (calibration set design, distribution shift, label noise). Mandatory secondary survey citation.
 
 ---
 
@@ -385,4 +434,13 @@ The CP-for-LLM landscape splits into three roughly parallel streams: (i) **set-o
 
 **Common theoretical contribution**: all three projects can extend CRC machinery in unified ways — non-exchangeable CP for distribution-shifted tool ecosystems / domains (citing Barber 2023, Domain-Shift-Aware CP 2025), and conditional CP for per-prompt / per-image guarantees (Cherian-Gibbs-Candes 2024).
 
-**Note on threats:** the highest-overlap papers, in order, are: (1) **Conformal Language Model Reasoning with Coherent Factuality** (ICLR 2025) - threatens CoT-CP; (2) **CoVeR** (2025) - threatens CoT-CP; (3) **Conformal Constrained Policy Optimization** (2025) - threatens CoT-Tool; (4) **Prune 'n Predict / CROQ** (ICML 2025) - threatens CoT-Tool; (5) **C-PMI Grounding Decoding** (NeurIPS 2025) - threatens CG-VL conceptually but is non-CP. Differentiable Conformal Training (2026 preprint) is a watch-item for CoT-CP.
+**Note on threats (updated 2026-05-08):** the highest-overlap papers, in order, are now:
+(1) **Thought Calibration** (Stewart et al., EMNLP 2025, §2.17) — *new highest threat to CoT-CP*: same problem (calibrated test-time stopping), same era, R1-distill overlap. CoT-CP must differentiate via score-family Pareto (Theorem 2) + discrete weighted CP (Theorem 3) + 11×7 model-dataset matrix.
+(2) **Conformal Language Model Reasoning with Coherent Factuality** (Rubin-Toles et al., ICLR 2025) — graphical reasoning-CP; threatens CoT-CP theoretical neighbor.
+(3) **CoVeR** (2509.04733, 2025) — token-cluster step CP; threatens CoT-CP.
+(4) **Differentiable Conformal Training** (2604.20098, 2026 preprint) — train-time CP; CoT-CP differentiates as inference-time / training-free.
+(5) **Conformal Constrained Policy Optimization** (2511.11828, 2025) — threatens CoT-Tool.
+(6) **Prune 'n Predict / CROQ** (ICML 2025) — threatens CoT-Tool.
+(7) **C-PMI Grounding Decoding** (NeurIPS 2025) — threatens CG-VL conceptually, non-CP.
+
+Watch list: Paraphrase-Robust CP (ICLR 2026 submission, §2.19) for the cross-dataset paraphrase angle; UCP (§2.21) if label-free calibration becomes a deployment requirement.

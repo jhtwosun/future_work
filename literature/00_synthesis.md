@@ -29,9 +29,12 @@
 | 5 | **Rewarding Progress / PAVs** (Setlur et al. [2410.08146](https://arxiv.org/abs/2410.08146)) | arXiv 2024 | Step-level verifier-guided adaptive search | Calibration of PAV scores into coverage-controlled gates |
 
 **CP-side neighbors** (theory threats, lighter):
+- ⚠️ **Thought Calibration** (Stewart et al., **EMNLP 2025**, [2505.18404](https://arxiv.org/pdf/2505.18404)) — **PROMOTED to highest CP-side threat (added 2026-05-08)**. Same problem (calibrated test-time stopping for R1/R1-distill), same era. Differentiation: CoT-CP introduces score-family Pareto (Theorem 2) + discrete-shift weighted CP (Theorem 3) + 11-model × 7-dataset matrix; Thought Calibration is single-model-family stopping rule.
 - **Conformal Language Model Reasoning with Coherent Factuality** (Rubin-Toles et al., **ICLR 2025**) — first CP on reasoning with deducibility graphs. Closest theoretical neighbor.
 - **CoVeR: Conformal Calibration for Versatile Next-Token Prediction** (arXiv 2509.04733, 2025) — token-cluster step calibration. Different unit.
 - **Differentiable Conformal Training** (2026 preprint) — *watch this*; if it lands at ICML 2026 it will be a primary citation.
+- **Paraphrase-Robust CP** (ICLR 2026 submission, [openreview Uf04r8gDn7](https://openreview.net/forum?id=Uf04r8gDn7)) — directly relevant to our `SX_paraphrase_cross_dataset` work.
+- **CP Beyond the Seen — Missing Mass** (NeurIPS 2025) — useful theoretical framing for novel-trace coverage.
 
 ### 1.2 Must-baseline (experimental)
 

@@ -1,0 +1,30 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "tag": "qwen25_7b",
+  "dataset": "aime",
+  "n": 500,
+  "vanilla_acc": 0.278,
+  "results": {
+    "always_K4": {
+      "acc": 0.318,
+      "delta": 0.03999999999999998,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 5.0
+    },
+    "gate_combined_f0.5_K4": {
+      "acc": 0.312,
+      "delta": 0.033999999999999975,
+      "n": 500,
+      "flagged_n": 432,
+      "avg_compute": 4.4559999999999995
+    },
+    "gate_ent_f0.5_K4": {
+      "acc": 0.29,
+      "delta": 0.011999999999999955,
+      "n": 500,
+      "flagged_n": 250,
+      "avg_compute": 3.0
+    }
+  }
+}

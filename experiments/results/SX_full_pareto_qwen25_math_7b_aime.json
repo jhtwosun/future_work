@@ -1,0 +1,30 @@
+{
+  "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+  "tag": "qwen25_math_7b",
+  "dataset": "aime",
+  "n": 500,
+  "vanilla_acc": 0.33,
+  "results": {
+    "always_K4": {
+      "acc": 0.336,
+      "delta": 0.006000000000000005,
+      "n": 500,
+      "flagged_n": 500,
+      "avg_compute": 5.0
+    },
+    "gate_combined_f0.5_K4": {
+      "acc": 0.34,
+      "delta": 0.010000000000000009,
+      "n": 500,
+      "flagged_n": 454,
+      "avg_compute": 4.632
+    },
+    "gate_ent_f0.5_K4": {
+      "acc": 0.334,
+      "delta": 0.0040000000000000036,
+      "n": 500,
+      "flagged_n": 250,
+      "avg_compute": 3.0
+    }
+  }
+}
